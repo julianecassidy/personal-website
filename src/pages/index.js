@@ -1,8 +1,8 @@
 import * as React from "react"
-import Home from "./home"
+import App from "./App";
 
 const Index = () => {
-  return <Home />
+  return <App />
 }
 
 export default Index;
