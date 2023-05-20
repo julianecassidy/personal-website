@@ -1,0 +1,11 @@
+p {
+    font-size: 100%;
+}
+
+p a {
+    color: darkolivegreen;
+}
+
+p a:hover {
+    color: darkslategray;
+}

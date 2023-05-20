@@ -1,5 +1,7 @@
 import React from "react";
 import { NavLink } from "react-router-dom";
+import SocialIcons from "./SocialIcons";
+import "./Nav.css";
 
 /** Component for Nav
  *  UI element for navigation bar.
@@ -10,7 +12,7 @@ import { NavLink } from "react-router-dom";
  * State:
  * - none
  * 
- * Home -> Nav
+ * App -> Nav
  */
 
 function Nav() {
@@ -23,7 +25,11 @@ function Nav() {
                 <NavLink to="/portfolio">Portfolio</NavLink>
                 <NavLink to="/blog">Blog</NavLink>
             </div>
+            <div className="Nav-social">
+                <SocialIcons />
+            </div>
         </nav>
+
     );
 }
 

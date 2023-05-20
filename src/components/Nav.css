@@ -1,0 +1,28 @@
+.Nav {
+    display: flex;
+    height: 60px;
+}
+
+.Nav a {
+    text-decoration: none;
+    padding: 2%;
+}
+
+.Nav-home {
+    font-size: 20px;
+    margin-right: 10px;
+}
+
+.Nav-right {
+    padding-top: 10px;
+    font-size: 16px;
+}
+
+.Nav-right a.active {
+    font-weight: bold;
+}
+
+.Nav-social {
+    margin-left: auto;
+    padding: 10px;
+}

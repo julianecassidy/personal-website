@@ -1,10 +1,11 @@
 import React from "react";
 import PortfolioItem from "./PortfolioItem";
+import highVolt from "../images/highvoltdigital.png";
 
 /** Component for Portfolio
  * 
  * Props:
- * - none
+ * - projects
  * 
  * State:
  * - none
@@ -12,31 +13,33 @@ import PortfolioItem from "./PortfolioItem";
  * Routes -> Portfolio
  */
 
-function Portfolio() {
+function Portfolio({ projects }) {
 
     return (
         <div className="Portfolio">
-            <div className="Portfolio-1">
-                <h3>Jobly</h3>
-                <p>Full stack job search web app with a Node.js and Express backend and React front end.</p>
-                <p>Project Repo</p>
+            {/* {projects.map(project => {
+                <PortfolioItem key={project.repo} project={project} /
+            })} */}
+            <div className="Portfolio-web-design">
+                <img src={highVolt}></img>
+                <div className="Portfolio-project-desc">
+                    <h3>Web Design</h3>
+                    <p>Modern, intuitive, and attractive web designs built around a business's brand.</p>
+                </div>
             </div>
-            <div className="Portfolio-2">
-                <h3>Warbler</h3>
-                <p>Pythhon and Flask social media platform.</p>
-                <p>Project Repo</p>
+            <div className="Portfolio-content">
+                <img src=""></img>
+                <div className="Portfolio-project-desc">
+                    <h3>Content Writing and SEO</h3>
+                    <p>Engaging, informative, and sometimes humorous content.</p>
+                </div>
             </div>
-            <div className="Portfolio-3">
-                <h3>Web Design</h3>
-                <p>Modern, intuitive, and attractive web designs built around a business's brand.</p>
-            </div>
-            <div className="Portfolio-4">
-                <h3>Content Writing and SEO</h3>
-                <p>Engaging, informative, and sometimes humorous content.</p>
-            </div>
-            <div className="Portoflio-5">
-                <h3>Other Projects</h3>
-                <p>Some coding related, many not.</p>
+            <div className="Portoflio-other">
+            <img src=""></img>
+                <div className="Portfolio-project-desc">
+                    <h3>Other Projects</h3>
+                    <p>Some coding related, many not.</p>
+                </div>
             </div>
         </div>
     )

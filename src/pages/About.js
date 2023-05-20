@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import photo from "../images/photo2.jpg";
+import AboutTimeline from "./AboutTimeline";
+import img from "../images/photo2.jpg";
 import "./About.css";
 
 /** Component for About
@@ -17,7 +18,7 @@ import "./About.css";
 function About() {
     return (
         <div className="About">
-            <img className="About-image" src={photo} />
+            <img className="About-image" src={img} />
             <section className="About-bio">
                 <h2>Who I Am</h2>
                 <p>
@@ -40,19 +41,18 @@ function About() {
                     data hygiene, data security, and training.
                 </p>
                 <p>
-                    Outside of coding, I like to spend time traveling, hiking, camping, 
-                    and climbing - often with my dog along for the adventure. I am also 
-                    a historical reenactor and you might spot me in Victorian garb.
-                    Should coding not work out, I am seeking full time employement as
-                    an ornamental hermit. If you have an estate that could use a hermit,
-                    feel free to <Link to="http://julesharter.com/hire-a-hermit/">peruse
+                    I am Denver, CO-based but usually traveling - often with my 
+                    dog along for the adventure. I also spend time hiking, camping, 
+                    and climbing. I am also a historical reenactor and you might 
+                    spot me in Victorian garb. Should coding not work out, I am 
+                    seeking full time employement as an ornamental hermit. If you
+                    have an estate that could use a hermit, feel free to 
+                    <Link to="http://julesharter.com/hire-a-hermit/">peruse
                     my proposal</Link>.
                 </p>
             </section>
-            {/* <section className="About-timeline">
-                <h2>How I Got Here</h2>
-
-            </section> */}
+            <AboutTimeline />
+            <p>You can also download my resume <Link to="pdf">here</Link>.</p>
         </div>
     )
 }

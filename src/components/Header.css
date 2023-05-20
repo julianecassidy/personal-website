@@ -1,0 +1,37 @@
+.Header {
+    display: flex;
+}
+
+.Header-text {
+    text-align: right;
+    margin-top: 0px;
+    margin-left: -90%;
+    margin-right: 5%;
+    padding: 3%;
+    background-color: hsl(82, 39%, 30%, .7);
+    height: 20%;
+    z-index: 10;
+}
+
+.Header-text h1 {
+    font-size: 30px;
+    color: white;
+}
+
+.Header-text h3 {
+    font-size: 18px;
+    color: white;
+}
+
+.Header p {
+    text-transform: uppercase;
+    color: white;
+}
+
+.Header-image img {
+    width: 60%;
+    margin-top: 15px;
+    margin-left: 3%;
+    border-radius: 10px;
+    z-index: 0;
+}

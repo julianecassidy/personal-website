@@ -1,6 +1,5 @@
 import * as React from "react"
 import Header from "../components/Header";
-import About from "./About";
 
 /** Component for Home
  *  Renders the navigation bar, header, homepage content, and the routes.
@@ -11,7 +10,7 @@ import About from "./About";
  * State:
  * - None
  * 
- * App -> Home -> { Nav, Header, CONTENT..., Routes }
+ * App -> Home -> Header
  */
 
 const Home = () => {
