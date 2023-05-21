@@ -1,11 +1,12 @@
 .Nav {
     display: flex;
-    height: 60px;
+    align-items: flex-end;
+    height: 40px;
 }
 
 .Nav a {
     text-decoration: none;
-    padding: 2%;
+    padding: 0% 2%;
 }
 
 .Nav-home {
@@ -14,7 +15,6 @@
 }
 
 .Nav-right {
-    padding-top: 10px;
     font-size: 16px;
 }
 
@@ -24,5 +24,5 @@
 
 .Nav-social {
     margin-left: auto;
-    padding: 10px;
+    padding: 0px 10px;
 }

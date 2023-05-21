@@ -1,3 +1,47 @@
+.About {
+    display: flex;
+    padding: 3%;
+}
+
+.About a {
+    text-decoration: none;
+}
+
+.About-bio {
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.About-bio h2 {
+    margin-bottom: 2px;
+    margin-left: auto;
+}
+
+.About-bio p {
+    margin-bottom: 2px;
+    text-align: right;
+}
+
 .About-image {
+    float: right;
+    margin-top: 7%;
+    margin-left: 7%;
+    height: 300px;
+    border-radius: 10px;
+    z-index: 10;
+}
+
+.About-image-background {
+    background-color: darkolivegreen;
+    border-radius: 10px;
+    height: 300px;
     width: 200px;
+    margin-top: 10%;
+    margin-left: -30%;
+    z-index: 0;
+}
+
+.About-resume a {
+    text-decoration: none;
 }

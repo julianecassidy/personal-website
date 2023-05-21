@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import img from "../images/photo3.jpg";
 import "./Header.css";
 
@@ -16,17 +17,22 @@ import "./Header.css";
 
 function Header() {
     return (
-        <section className="Header">
+        <div className="Header">
             <div className="Header-image">
                 <img src={img}></img>
             </div>
-            <div className="Header-text">
-                <h3>Hello, <br></br>
-                    I'm</h3>
-                <h1>Juliane Cassidy</h1>
-                <p>Web developer, teaching assistant, and content writer.</p>
+            <div className="Header-block">
+                <div className="Header-text">
+                    <h3>Hello, I'm</h3>
+                    <h1>Juliane Cassidy</h1>
+                    <p>Web developer, teaching assistant, and content writer.</p>
+                </div>
+                <div className="Header-nav">
+                    <Link to="/about"><button>Get to know me</button></Link>
+                    <Link to="/portfolio"><button>Check out my projects</button></Link>
+                </div>
             </div>
-        </section>
+        </div>
     )
 
 }
