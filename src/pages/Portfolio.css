@@ -1,0 +1,108 @@
+.Portfolio {
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.Portfolio h1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.Portfolio h2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+}
+
+.Portfolio h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+}
+
+.Portfolio-project-desc p {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 10px;
+}
+
+.Portfolio img {
+    width: 300px;
+}
+
+.Portfolio-more-projects {
+    display: flex;
+}
+
+.Portfolio-dotted-line-right {
+    border-top: 2px dotted #FE5F55;
+    border-right: 2px dotted #FE5F55;
+    margin-left: 10%;
+    margin-top: -25%;
+    height: 200px;
+    width: 70%;
+}
+
+.Portfolio-dotted-line-left {
+    border-top: 2px dotted #FE5F55;
+    border-left: 2px dotted #FE5F55;
+    margin-left: auto;
+    margin-right: 10%;
+    margin-top: -25%;
+    height: 200px;
+    width: 70%;
+}
+
+.Portfolio-web-design {
+    margin-left: 0px;
+    margin-bottom: 4%;
+    padding: 0px;
+    width: 300px;
+    box-shadow: 5px 1px 20px #7A9E9F;
+}
+
+.Portfolio-web-design p {
+    text-align: right;
+}
+
+.Portfolio-web-design h3 {
+    text-align: right;
+}
+
+.Portfolio-content {
+    margin-left: auto;
+    margin-bottom: 4%;
+    padding: 0px;
+    width: 300px;
+    box-shadow: 5px 1px 20px #7A9E9F;
+}
+
+.Portfolio-content p {
+    text-align: left;
+}
+
+.Portfolio-content h3 {
+    text-align: left;
+}
+
+.Portfolio-other {
+    margin-left: 0px;
+    margin-bottom: 4%;
+    padding: 0px;
+    width: 300px;
+    box-shadow: 5px 1px 20px #7A9E9F;
+}
+
+.Portfolio-other p {
+    text-align: right;
+}
+
+.Portfolio-other h3 {
+    text-align: right;
+}

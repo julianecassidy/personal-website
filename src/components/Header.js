@@ -18,19 +18,19 @@ import "./Header.css";
 function Header() {
     return (
         <div className="Header">
-            <div className="Header-image">
-                <img src={img}></img>
-            </div>
             <div className="Header-block">
                 <div className="Header-text">
                     <h3>Hello, I'm</h3>
                     <h1>Juliane Cassidy</h1>
-                    <p>Web developer, teaching assistant, and content writer.</p>
+                    <p>Web developer, teaching assistant,<br></br> and content writer.</p>
                 </div>
                 <div className="Header-nav">
                     <Link to="/about"><button>Get to know me</button></Link>
-                    <Link to="/portfolio"><button>Check out my projects</button></Link>
+                    <Link to="/portfolio"><button>Projects</button></Link>
                 </div>
+            </div>
+            <div className="Header-image">
+                <img src={img}></img>
             </div>
         </div>
     )

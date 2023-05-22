@@ -1,11 +1,13 @@
-p {
-    font-size: 100%;
-}
+@import url('https://fonts.googleapis.com/css2?family=Economica:wght@400;700&family=La+Belle+Aurore&family=Open+Sans:wght@300;400;600;700&display=swap');
 
 p a {
-    color: darkolivegreen;
+    color: #7A9E9F;
 }
 
 p a:hover {
-    color: darkslategray;
+    color: #4F6367;
+}
+
+body {
+    background-color: #EEF5DB;
 }

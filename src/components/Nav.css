@@ -6,23 +6,40 @@
 
 .Nav a {
     text-decoration: none;
-    padding: 0% 2%;
 }
 
 .Nav-home {
-    font-size: 20px;
-    margin-right: 10px;
+    font-family: 'La Belle Aurore', cursive;
+    color: #4F6367;
+    font-size: 30px;
+    margin-right: 40px;
+    margin-bottom: -20px;
+    margin-left: 10px;
 }
 
 .Nav-right {
+    font-family: 'Economica', sans-serif;
     font-size: 16px;
+}
+
+.Nav-right a {
+    padding-right: 15%;
+    color: #4F6367;
+    transition: 0.3s;
+}
+
+.Nav-right a:hover {
+    color: #FE5F55;
 }
 
 .Nav-right a.active {
     font-weight: bold;
+    text-decoration: underline;
 }
 
 .Nav-social {
     margin-left: auto;
-    padding: 0px 10px;
+    margin-bottom: -8px;
+    padding-bottom: 0px;
+    padding-right: 10px;
 }

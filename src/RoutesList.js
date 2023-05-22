@@ -22,7 +22,7 @@ function RoutesList() {
             <Route path="/about" element={<About />}></Route>
             <Route path="/portfolio" element={<Portfolio />}></Route>
             <Route path="/blog" element={<Blog />}></Route>
-            <Route path="/" element={<About />}></Route>
+            <Route path="/" element={<Home />}></Route>
             <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
     )
