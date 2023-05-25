@@ -9,6 +9,8 @@
     flex: 1;
     align-items: center;
     justify-content: center;
+    font-family: 'Economica', sans-serif;
+    color: #4F6367;
 }
 
 .Portfolio h2 {
@@ -17,6 +19,8 @@
     flex: 1;
     align-items: center;
     justify-content: center;
+    font-family: 'Economica', sans-serif;
+    color: #4F6367;
 }
 
 .Portfolio h3 {
@@ -24,12 +28,15 @@
     padding-right: 10px;
     margin-top: 3px;
     margin-bottom: 2px;
+    font-family: 'Economica', sans-serif;
+    color: #4F6367;
 }
 
 .Portfolio-project-desc p {
     padding-left: 10px;
     padding-right: 10px;
     padding-bottom: 10px;
+    font-family: 'Open-sans',sans-serif;
 }
 
 .Portfolio img {
@@ -38,6 +45,10 @@
 
 .Portfolio-more-projects {
     display: flex;
+}
+
+.Portfolio-more-projects h2 {
+    font-family: 'Econimica', sans-serif;
 }
 
 .Portfolio-dotted-line-right {
@@ -60,8 +71,8 @@
 }
 
 .Portfolio-web-design {
-    margin-left: 0px;
-    margin-bottom: 4%;
+    margin-left: 5%;
+    margin-bottom: 1%;
     padding: 0px;
     width: 300px;
     box-shadow: 5px 1px 20px #7A9E9F;
@@ -77,7 +88,8 @@
 
 .Portfolio-content {
     margin-left: auto;
-    margin-bottom: 4%;
+    margin-right: 5%;
+    margin-bottom: 1%;
     padding: 0px;
     width: 300px;
     box-shadow: 5px 1px 20px #7A9E9F;
@@ -92,8 +104,8 @@
 }
 
 .Portfolio-other {
-    margin-left: 0px;
-    margin-bottom: 4%;
+    margin-left: 5%;
+    margin-bottom: 1%;
     padding: 0px;
     width: 300px;
     box-shadow: 5px 1px 20px #7A9E9F;

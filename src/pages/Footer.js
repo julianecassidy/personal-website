@@ -15,6 +15,7 @@ import "./Footer.css";
 function Footer() {
     return (
         <div className="Footer">
+            <hr></hr>
             <div className="Footer-copyright">
                 <p>©2023 Juliane Cassidy</p>
             </div>

@@ -56,7 +56,9 @@ function About() {
                 <div>
                 </div>
             </div>
+            <hr></hr>
             <AboutTimeline />
+            <hr></hr>
             <p className="About-resume">You can also download my resume <Link to="pdf">here</Link>.</p>
         </div>
     )

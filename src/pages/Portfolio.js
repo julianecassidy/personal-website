@@ -1,6 +1,8 @@
 import React from "react";
 import PortfolioItem from "./PortfolioItem";
 import highVolt from "../images/highvoltdigital.png";
+import typewriter from "../images/typewriter.jpg";
+import postcards from "../images/postcards.jpg";
 import "./Portfolio.css";
 import "./PortfolioItem.css";
 
@@ -37,7 +39,7 @@ function Portfolio({ projects }) {
                 </div>
                 <div className="Portfolio-dotted-line-right"></div>
                 <div className="Portfolio-content">
-                    <img src=""></img>
+                    <img src={typewriter}></img>
                     <div className="Portfolio-project-desc">
                         <h3>Content Writing and SEO</h3>
                         <p>Engaging, informative, and sometimes humorous content.</p>
@@ -45,7 +47,7 @@ function Portfolio({ projects }) {
                 </div>
                 <div className="Portfolio-dotted-line-left"></div>
                 <div className="Portfolio-other">
-                <img src=""></img>
+                <img src={postcards}></img>
                     <div className="Portfolio-project-desc">
                         <h3>Other Projects</h3>
                         <p>Some coding related, many not.</p>
