@@ -18,7 +18,7 @@ function SocialIcons() {
 
     return (
         <div className="SocialIcons">
-            <p>
+            <div>
                 Find me elsewhere:
                 <div className="SocialIcons-icons">
                     <Link to="https://www.linkedin.com/in/julianemcassidy/">
@@ -28,7 +28,7 @@ function SocialIcons() {
                         <FaGithub />
                     </Link>
                 </div>
-            </p>
+            </div>
         </div>
     )
 }

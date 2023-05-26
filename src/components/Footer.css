@@ -1,0 +1,17 @@
+.Footer {
+    margin-top: 5%;
+}
+
+.Footer hr {
+    background-color: #7A9E9F;
+    border: none;
+    height: .5px;
+    width: 80%;
+    
+}
+
+.Footer-copyright {
+    font-size: 11px;
+    color: #7A9E9F;
+    text-align: center;
+}
