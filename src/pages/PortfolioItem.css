@@ -1,0 +1,29 @@
+.PortfolioItem {
+    display: inline-block;
+    margin-left: 5%;
+    margin-bottom: 20px;
+    padding: 0px;
+    width: 300px;
+    box-shadow: 5px 1px 20px #7A9E9F;
+}
+
+.PortfolioItem h3 {
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+.PortfolioItem-language {
+    margin: 5px;
+    font-family: 'Economica', sans-serif;
+    font-size: 12px;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.PortfolioItem-description {
+    margin-top: 0px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    font-family: 'Open-Sans', sans-serif;
+    font-size: 16px;
+}

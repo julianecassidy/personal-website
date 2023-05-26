@@ -1,4 +1,5 @@
 import React from "react";
+import "./PortfolioItem.css";
 
 /** Component for PortfolioItem
  * 
@@ -13,15 +14,17 @@ import React from "react";
 
 function PortfolioItem({ project }) {
 
+    console.debug("PortfolioItem with project: ", project);
+
     return (
         <div className="PortfolioItem">
             <img src=""></img>
             <div>
-                <h3>{project.repo}</h3>
+                <h3>{project.name}</h3>
                 <p className="PortfolioItem-language">
                     Language: {project.language}
                 </p>
-                <p>{project.description}</p>
+                <p className="PortfolioItem-description">{project.description}</p>
             </div>
     </div>
     )

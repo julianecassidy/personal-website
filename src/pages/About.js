@@ -43,7 +43,7 @@ function About() {
                     <p>
                         I am Denver, CO-based but usually traveling - often with my
                         dog along for the adventure. I also spend time hiking, camping,
-                        and climbing. I am also a historical reenactor and you might
+                        and climbing. I am a historical reenactor and you might
                         spot me in Victorian garb. Should coding not work out, I am
                         seeking full time employement as an ornamental hermit. If you
                         have an estate that could use a hermit, feel free to
@@ -56,9 +56,9 @@ function About() {
                 <div>
                 </div>
             </div>
-            <hr></hr>
+            <hr className="About-hr"></hr>
             <AboutTimeline />
-            <hr></hr>
+            <hr className="About-hr"></hr>
             <p className="About-resume">You can also download my resume <Link to="pdf">here</Link>.</p>
         </div>
     )

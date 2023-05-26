@@ -1,6 +1,6 @@
 .Portfolio {
-    padding-left: 5%;
-    padding-right: 5%;
+    padding-left: 10%;
+    padding-right: 10%;
 }
 
 .Portfolio h1 {
@@ -55,7 +55,7 @@
     border-top: 2px dotted #FE5F55;
     border-right: 2px dotted #FE5F55;
     margin-left: 10%;
-    margin-top: -25%;
+    margin-top: -175px;
     height: 200px;
     width: 70%;
 }
@@ -65,14 +65,13 @@
     border-left: 2px dotted #FE5F55;
     margin-left: auto;
     margin-right: 10%;
-    margin-top: -25%;
+    margin-top: -175px;
     height: 200px;
     width: 70%;
 }
 
 .Portfolio-web-design {
     margin-left: 5%;
-    margin-bottom: 1%;
     padding: 0px;
     width: 300px;
     box-shadow: 5px 1px 20px #7A9E9F;
@@ -89,7 +88,6 @@
 .Portfolio-content {
     margin-left: auto;
     margin-right: 5%;
-    margin-bottom: 1%;
     padding: 0px;
     width: 300px;
     box-shadow: 5px 1px 20px #7A9E9F;
