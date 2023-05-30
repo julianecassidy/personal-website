@@ -1,4 +1,5 @@
 import React from "react";
+import PortfolioItem from "./PortfolioItem";
 import { Link } from "react-router-dom";
 import img from "../images/photo3.jpg";
 import "./Home.css";
@@ -7,7 +8,7 @@ import "./Home.css";
  *  UI component for Home page image and text
  * 
  * Props:
- * - none
+ * - projects
  * 
  * State:
  * - none
@@ -15,7 +16,7 @@ import "./Home.css";
  * App -> Home
  */
 
-function Home() {
+function Home({ projects }) {
     return (
         <div className="Home">
             <div className="Home-block">
@@ -32,6 +33,16 @@ function Home() {
             <div className="Home-image">
                 <img src={img}></img>
             </div>
+            {projects.projects.length > 0 &&
+                <div className="Home-projects">
+                    <h2>Projects</h2>
+                    <div className="Home-projects-items">
+                        {projects.projects.map(project => 
+                            <PortfolioItem key={project.id} project={project} />
+                        )}
+                    </div>
+                </div>
+            }
         </div>
     )
 

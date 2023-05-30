@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import "./PortfolioItem.css";
 
 /** Component for PortfolioItem
@@ -18,13 +19,19 @@ function PortfolioItem({ project }) {
 
     return (
         <div className="PortfolioItem">
-            <img src=""></img>
+            <img src={project.image}></img>
             <div>
-                <h3>{project.name}</h3>
+                <h3 className="PortfolioItem-name">{project.name}</h3>
                 <p className="PortfolioItem-language">
                     Language: {project.language}
                 </p>
-                <p className="PortfolioItem-description">{project.description}</p>
+                <div className="PortfolioItem-description">
+                    {project.description}
+                </div>
+                <div className="PortfolioItem-links">
+                    <Link to={project.github}>GitHub</Link>
+                    <Link to={project.website}>Demo</Link>
+                </div>
             </div>
     </div>
     )

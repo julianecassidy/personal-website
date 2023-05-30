@@ -1,5 +1,4 @@
 import React from "react";
-import ProjectApi from "../ProjectAPI";
 import PortfolioItem from "./PortfolioItem";
 import highVolt from "../images/highvoltdigital.png";
 import typewriter from "../images/typewriter.jpg";
@@ -7,13 +6,10 @@ import postcards from "../images/postcards.jpg";
 import "./Portfolio.css";
 import "./PortfolioItem.css";
 
-const PROJECTS_TO_DISPLAY = ['friender-frontend', 'friender-backend', 'react-jobly', 'warbler'];
-const SCREENSHOTS = [];
-
 /** Component for Portfolio
  * 
  * Props:
- * - none
+ * - projects
  * 
  * State:
  * - none
@@ -21,36 +17,20 @@ const SCREENSHOTS = [];
  * Routes -> Portfolio -> PortfolioItem
  */
 
-function Portfolio() {
-
-    const [projects, setProjects] = React.useState([]);
-    console.debug("Portfolio state projects: ", projects);
-
-    /** Fetches repo details on page load. */
-    React.useEffect(function fetchProjectDataOnLoad () {
-        /** Get project data from GitHub API and set state with array of projects. */
-        async function getProjectsFromApi() {
-            console.debug("getProjectsFromApi");
-            try {
-                const projectsData = await ProjectApi.getRepos(PROJECTS_TO_DISPLAY);
-                setProjects(projectsData);
-            } catch (err) {
-                console.log(err);
-                setProjects([]);
-            }
-        } 
-        getProjectsFromApi();
-    }, []);
+function Portfolio({ projects }) {
+    console.debug("Portfolio projects", projects);
 
     return (
         <div className="Portfolio">
             <h1>Portfolio</h1>
-            {projects.length > 0 &&
-                <div className="Portoflio-software-items">
+            {projects.projects.length > 0 &&
+                <div className="Portoflio-software">
                     <h2>Software Development</h2>
-                    {projects.map(project => 
-                        <PortfolioItem key={project.id} project={project} />
-                    )}
+                    <div className="Potfolio-software-items">
+                        {projects.projects.map(project => 
+                            <PortfolioItem key={project.id} project={project} />
+                        )}
+                    </div>
                 </div>
             }
             <div className="Portoflio-more-projects">
