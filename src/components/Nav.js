@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "gatsby";
+import { NavLink } from "react-router-dom";
 import SocialIcons from "./SocialIcons";
 import "./Nav.css";
 
@@ -19,10 +19,10 @@ function Nav() {
 
     return (
         <nav className="Nav">
-            <Link className="Nav-home" to="/">Juliane Cassidy</Link>
+            <NavLink className="Nav-home" to="/">Juliane Cassidy</NavLink>
             <div className="Nav-right">
-                <Link to="/about">About</Link>
-                <Link to="/portfolio">Portfolio</Link>
+                <NavLink to="/about">About</NavLink>
+                <NavLink to="/portfolio">Portfolio</NavLink>
                 {/* <NavLink to="/blog">Blog</NavLink> */}
             </div>
             <div className="Nav-social">

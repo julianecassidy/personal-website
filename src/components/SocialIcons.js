@@ -1,5 +1,6 @@
 import React from "react";
-import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import { Link } from "react-router-dom";
+import { FaLinkedin, FaGithub, FaGit } from 'react-icons/fa';
 import './SocialIcons.css';
 
 /** Component for SocialIcons
@@ -17,12 +18,12 @@ function SocialIcons() {
 
     return (
         <div className="SocialIcons">
-            <a href="https://www.linkedin.com/in/julianemcassidy/">
+            <Link to="https://www.linkedin.com/in/julianemcassidy/">
                 <FaLinkedin />
-            </a>
-            <a href="https://github.com/julianecassidy">
+            </Link>
+            <Link to="https://github.com/julianecassidy">
                 <FaGithub />
-            </a>
+            </Link>
         </div>
     )
 }
