@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import ProjectButton from "../components/ProjectButton";
-import img from "../images/photo3.jpg";
+import img from "../images/blue.jpg";
 import "./Home.css";
 
 /** Component for Home
@@ -37,7 +37,6 @@ function Home({ projects }) {
                 </div>
                 <div className="Home-nav">
                     <Link to="/about"><button>Get to know me</button></Link>
-                    <Link to="/portfolio"><button>Projects</button></Link>
                 </div>
             </div>
             <div className="Home-image">
@@ -55,6 +54,9 @@ function Home({ projects }) {
                         />
                         )}  
                 </div>
+                <Link to="/portfolio"><button className="Home-projects-button">
+                    More Projects
+                </button></Link>
             </div>
         </div>
     )
