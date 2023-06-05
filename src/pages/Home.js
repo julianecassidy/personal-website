@@ -1,6 +1,7 @@
 import React from "react";
-import PortfolioItem from "./PortfolioItem";
 import { Link } from "react-router-dom";
+import { v4 as uuid } from "uuid";
+import ProjectButton from "./ProjectButton";
 import img from "../images/photo3.jpg";
 import "./Home.css";
 
@@ -11,12 +12,21 @@ import "./Home.css";
  * - projects
  * 
  * State:
- * - none
+ * - displayImage
  * 
  * App -> Home
  */
 
 function Home({ projects }) {
+    const [displayImage, setDisplayImage] = React.useState(img);
+    console.log("Home state: ", displayImage, "projects: ", projects);
+
+    /** On hover, update display image to project image. */
+    function changeDisplayImage(index) {
+        console.debug("project at index", projects.projects[index.index])
+        setDisplayImage(projects.projects[index.index].image);
+    }
+
     return (
         <div className="Home">
             <div className="Home-block">
@@ -31,18 +41,21 @@ function Home({ projects }) {
                 </div>
             </div>
             <div className="Home-image">
-                <img src={img}></img>
+                <img src={displayImage}></img>
             </div>
-            {projects.projects.length > 0 &&
-                <div className="Home-projects">
-                    <h2>Projects</h2>
-                    <div className="Home-projects-items">
-                        {projects.projects.map(project => 
-                            <PortfolioItem key={project.id} project={project} />
-                        )}
-                    </div>
+            <div className="Home-projects">
+                <h3>Projects</h3>
+                <div>
+                    {projects.projects.map((project, index) =>
+                        <ProjectButton 
+                        key={uuid()}
+                        index={index} 
+                        project={project}
+                        changeDisplayImage={changeDisplayImage}
+                        />
+                        )}  
                 </div>
-            }
+            </div>
         </div>
     )
 

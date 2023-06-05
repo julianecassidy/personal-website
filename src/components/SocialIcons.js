@@ -18,17 +18,12 @@ function SocialIcons() {
 
     return (
         <div className="SocialIcons">
-            <div>
-                Find me elsewhere:
-                <div className="SocialIcons-icons">
-                    <Link to="https://www.linkedin.com/in/julianemcassidy/">
-                        <FaLinkedin />
-                    </Link>
-                    <Link to="https://github.com/julianecassidy">
-                        <FaGithub />
-                    </Link>
-                </div>
-            </div>
+            <Link to="https://www.linkedin.com/in/julianemcassidy/">
+                <FaLinkedin />
+            </Link>
+            <Link to="https://github.com/julianecassidy">
+                <FaGithub />
+            </Link>
         </div>
     )
 }

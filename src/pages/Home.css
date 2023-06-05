@@ -1,13 +1,13 @@
-/* .Home {
-    display: inline;
-} */
+.Home {
+    position: relative;
+}
 
 .Home-block {
-    margin-top: 40px;
-    margin-left: 50%;
-    margin-right: 3%;
-    padding: 2% 2%;
-    background-color: #7a9e9fce;
+    margin-top: 30px;
+    margin-left: 55%;
+    margin-right: 0%;
+    padding: 2% 2% 2% 0%;
+    background-color: #7a9e9fe0;
     border-radius: 5px;
     height: 20%;
     width: 40%;
@@ -25,7 +25,7 @@
     margin-bottom: 0px;
     font-family: 'La Belle Aurore', cursive;
     font-size: 40px;
-    color: #EEF5DB;
+    color: #eaeaea;
 }
 
 .Home-text h3 {
@@ -35,19 +35,19 @@
     color: #B8D8D8;
 }
 
-.Home p {
+.Home-text p {
     margin-top: 1px;
     font-family: 'Economica', sans-serif;
     text-transform: uppercase;
-    color: #EEF5DB;
+    color: #eaeaea;
 }
 
 .Home-image img {
     width: 80%;
-    margin-top: -250px;
-    margin-left: 3%;
+    margin-top: -30%;
+    margin-left: 13%;
     border-radius: 10px;
-    position: relative;
+    position: absolute;
     z-index: 0;
 }
 
@@ -60,7 +60,7 @@
     width: 135px;
     height: 50px;
     background-color: #4F6367;
-    color: #EEF5DB;
+    color: #eaeaea;
     font-family: 'Open-sans', sans-serif;
     font-size: 10px;
     text-transform: uppercase;
@@ -73,20 +73,25 @@
     background-color: #FE5F55;
 }
 
-.Home-projects h2 {
-    display: flex;
-    flex-direction: column;
-    flex: 1;
-    margin-top: 3%;
-    margin-bottom: 2%;
-    align-items: center;
-    justify-content: center;
-    font-family: 'Economica', sans-serif;
-    font-size: 30px;
-    color: #4F6367;
+.Home-projects {
+    position: absolute;
+    margin-top: -25%;
+    margin-left: 3%;
+    padding-top: 10px;
+    padding-left: 15px;
+    padding-bottom: 10px;
+    width: 200px;
+    background: #eaeaea;
+    border-radius: 10px;
+    box-shadow: -1px -1px 10px #7A9E9F;
+    z-index: 10;
 }
 
-.Home-projects-items {
-    display: flex;
-    justify-content: center;
+.Home-projects h3 {
+    margin-top: 3%;
+    margin-bottom: 2%;
+    font-family: 'Economica', sans-serif;
+    font-size: 24px;
+    color: #4F6367;
+    text-align: center;
 }

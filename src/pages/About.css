@@ -15,14 +15,13 @@
 
 .About-bio h2 {
     margin-bottom: 2px;
-    margin-left: auto;
     font-family: 'Economica', sans-serif;
     color: #4F6367;
 }
 
 .About-bio p {
     margin-bottom: 2px;
-    text-align: right;
+    text-align: left;
     font-family: 'Open-sans', sans-serif;
     font-size: 100%;
 }

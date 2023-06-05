@@ -1,6 +1,6 @@
 .Portfolio {
-    padding-left: 10%;
-    padding-right: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
 }
 
 .Portfolio h1 {
@@ -72,8 +72,7 @@
 }
 
 .Portfolio-web-design {
-    margin-left: 5%;
-    padding: 0px;
+    margin-left: 3%;
     width: 300px;
     box-shadow: 5px 1px 20px #7A9E9F;
 }
@@ -88,7 +87,7 @@
 
 .Portfolio-content {
     margin-left: auto;
-    margin-right: 5%;
+    margin-right: 3%;
     padding: 0px;
     width: 300px;
     box-shadow: 5px 1px 20px #7A9E9F;
@@ -103,7 +102,7 @@
 }
 
 .Portfolio-other {
-    margin-left: 5%;
+    margin-left: 3%;
     margin-bottom: 1%;
     padding: 0px;
     width: 300px;

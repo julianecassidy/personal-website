@@ -19,7 +19,9 @@ function PortfolioItem({ project }) {
 
     return (
         <div className="PortfolioItem">
-            <img src={project.image}></img>
+            <Link to={project.website} target="_blank" rel="noopener noreferrer">
+                <img src={project.image}></img>
+            </Link>
             <div>
                 <h3 className="PortfolioItem-name">{project.name}</h3>
                 <p className="PortfolioItem-language">
@@ -29,8 +31,12 @@ function PortfolioItem({ project }) {
                     {project.description}
                 </div>
                 <div className="PortfolioItem-links">
-                    <Link to={project.github}>GitHub</Link>
-                    <Link to={project.website}>Demo</Link>
+                    <Link to={project.github} target="_blank" rel="noopener noreferrer">
+                        GitHub
+                    </Link>
+                    <Link to={project.website} target="_blank" rel="noopener noreferrer">
+                        Demo
+                    </Link>
                 </div>
             </div>
     </div>
