@@ -14,7 +14,7 @@ import "./Home.css";
  * State:
  * - displayImage
  * 
- * App -> Home
+ * App -> Home -> ProjectButton
  */
 
 function Home({ projects }) {

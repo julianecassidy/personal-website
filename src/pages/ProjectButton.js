@@ -2,11 +2,10 @@ import React from "react";
 import { Link } from "react-router-dom";
 import "./ProjectButton.css";
 
-
 /** Component for ProjectButton
  * 
  * Props:
- * - index, project
+ * - index, project, changeDisplayImage
  * 
  * State:
  * - none
