@@ -22,7 +22,7 @@ function About() {
                 <div className="About-bio">
                     <h2>Who I Am</h2>
                     <p>
-                        I am a software engineer and teaching assistant at Rithm School.
+                        I am a software engineer at Rithm School.
                         My focus is on building and maintaining scalable and secure web
                         apps with Node.js, React, and Python.
                     </p>

@@ -33,7 +33,7 @@ function Home({ projects }) {
                 <div className="Home-text">
                     <h3>Hello, I'm</h3>
                     <h1>Juliane Cassidy</h1>
-                    <p>Web developer, teaching assistant,<br></br> and content writer.</p>
+                    <p>Software engineer, web designer<br></br> and content writer.</p>
                 </div>
                 <div className="Home-nav">
                     <Link to="/about"><button>Get to know me</button></Link>
