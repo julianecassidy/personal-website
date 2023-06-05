@@ -21,6 +21,7 @@ function ProjectButton ({ index, project, changeDisplayImage }) {
         changeDisplayImage(index);
     }
 
+    if (project) {
     return (
         <div className="ProjectButton">
             <Link 
@@ -34,6 +35,7 @@ function ProjectButton ({ index, project, changeDisplayImage }) {
                 <hr></hr>
         </div>
     )
+    } else return;
 
 }
 

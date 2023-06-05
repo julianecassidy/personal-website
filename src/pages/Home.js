@@ -43,6 +43,7 @@ function Home({ projects }) {
             <div className="Home-image">
                 <img src={displayImage}></img>
             </div>
+            {projects.projects.length > 0 &&
             <div className="Home-projects">
                 <h3>Projects</h3>
                 <div>
@@ -55,7 +56,7 @@ function Home({ projects }) {
                         />
                         )}  
                 </div>
-            </div>
+            </div>}
         </div>
     )
 
