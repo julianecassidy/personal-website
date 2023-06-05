@@ -1,10 +1,9 @@
 import React from "react";
-import PortfolioItem from "./PortfolioItem";
+import PortfolioItem from "../components/PortfolioItem";
 import highVolt from "../images/highvoltdigital.png";
 import typewriter from "../images/typewriter.jpg";
 import postcards from "../images/postcards.jpg";
 import "./Portfolio.css";
-import "./PortfolioItem.css";
 
 /** Component for Portfolio
  * 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
-import ProjectButton from "./ProjectButton";
+import ProjectButton from "../components/ProjectButton";
 import img from "../images/photo3.jpg";
 import "./Home.css";
 

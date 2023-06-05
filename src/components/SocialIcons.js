@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import { FaLinkedin, FaGithub, FaGit } from 'react-icons/fa';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import './SocialIcons.css';
 
 /** Component for SocialIcons
