@@ -19,7 +19,7 @@ function PortfolioItem({ project }) {
     return (
         <div className="PortfolioItem">
             <a href={project.website} target="_blank" rel="noopener noreferrer">
-                <img src={project.image}></img>
+                <img src={project.image} alt=""></img>
             </a>
             <div>
                 <h3 className="PortfolioItem-name">{project.name}</h3>

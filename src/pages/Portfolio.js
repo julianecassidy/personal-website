@@ -35,7 +35,7 @@ function Portfolio({ projects }) {
             <div className="Portoflio-more-projects">
                 <h2>More Projects</h2>
                 <div className="Portfolio-web-design">
-                    <img src={highVolt}></img>
+                    <img src={highVolt} alt=""></img>
                     <div className="Portfolio-project-desc">
                         <h3>Web Design</h3>
                         <p>Modern, intuitive, and attractive web designs built around a business's brand.</p>
@@ -43,7 +43,7 @@ function Portfolio({ projects }) {
                 </div>
                 <div className="Portfolio-dotted-line-right"></div>
                 <div className="Portfolio-content">
-                    <img src={typewriter}></img>
+                    <img src={typewriter} alt=""></img>
                     <div className="Portfolio-project-desc">
                         <h3>Content Writing and SEO</h3>
                         <p>Engaging, informative, and sometimes humorous content.</p>
@@ -51,7 +51,7 @@ function Portfolio({ projects }) {
                 </div>
                 <div className="Portfolio-dotted-line-left"></div>
                 <div className="Portfolio-other">
-                    <img src={postcards}></img>
+                    <img src={postcards} alt=""></img>
                     <div className="Portfolio-project-desc">
                         <h3>Other Projects</h3>
                         <p>Some coding related, many not.</p>

@@ -51,7 +51,7 @@ function About() {
                             my proposal</Link>.
                     </p>
                 </div>
-                <img className="About-image" src={img} />
+                <img className="About-image" src={img} alt="" />
                 <div className="About-image-background"></div>
                 <div>
                 </div>
