@@ -44,11 +44,7 @@ function About() {
                         I am Denver, CO-based but usually traveling - often with my
                         dog along for the adventure. I also spend time hiking, camping,
                         and climbing. I am a historical reenactor and you might
-                        spot me in Victorian garb. Should coding not work out, I am
-                        seeking full time employement as an ornamental hermit. If you
-                        have an estate that could use a hermit, feel free to
-                        <Link to="http://julesharter.com/hire-a-hermit/"> peruse
-                            my proposal</Link>.
+                        spot me in Victorian garb.
                     </p>
                 </div>
                 <img className="About-image" src={img} alt="" />
