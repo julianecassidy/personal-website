@@ -1,7 +1,8 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link } from "gatsby";
 import { v4 as uuid } from "uuid";
-import ProjectButton from "./ProjectButton";
+import ProjectButton from "../components/ProjectButton";
+import Layout from "../components/layout";
 import img from "../images/photo3.jpg";
 import "./Home.css";
 
@@ -23,11 +24,12 @@ function Home({ projects }) {
 
     /** On hover, update display image to project image. */
     function changeDisplayImage(index) {
-        console.debug("project at index", projects.projects[index.index])
-        setDisplayImage(projects.projects[index.index].image);
+        console.debug("project at index", projects[index.index])
+        setDisplayImage(projects[index.index].image);
     }
 
     return (
+        <Layout>
         <div className="Home">
             <div className="Home-block">
                 <div className="Home-text">
@@ -43,11 +45,11 @@ function Home({ projects }) {
             <div className="Home-image">
                 <img src={displayImage}></img>
             </div>
-            {projects.projects.length > 0 &&
+            {projects && projects.length > 0 && (
             <div className="Home-projects">
                 <h3>Projects</h3>
                 <div>
-                    {projects.projects.map((project, index) =>
+                    {projects.map((project, index) =>
                         <ProjectButton 
                         key={uuid()}
                         index={index} 
@@ -56,8 +58,9 @@ function Home({ projects }) {
                         />
                         )}  
                 </div>
-            </div>}
+            </div>)}
         </div>
+        </Layout>
     )
 
 }

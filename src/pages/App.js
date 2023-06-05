@@ -1,9 +1,11 @@
 import * as React from "react"
-import { BrowserRouter } from "react-router-dom";
+import { Router } from "@reach/router";
 import ProjectApi from "../ProjectAPI";
-import Nav from "../components/Nav";
-import RoutesList from "../RoutesList";
-import Footer from "../components/Footer";
+import About from "./about";
+import Portfolio from "./portfolio";
+import Blog from "./blog";
+import Home from "./home";
+import NotFoundPage from "./NotFoundPage";
 import './App.css';
 
 const PROJECTS_TO_DISPLAY = ['react-jobify', 'flitter'];
@@ -47,12 +49,15 @@ function App() {
       getProjectsFromApi();
   }, []);
 
-  return (<div className="App">
-    <BrowserRouter>
-        <Nav />
-        <RoutesList projects={projects} />
-    </BrowserRouter>
-    <Footer />
+  return (
+  <div className="App">
+     <Router basepath="/">
+          <About path="about" />
+          <Portfolio path="portfolio" />
+          <Blog path="blog" />
+          <Home path="/" projects={projects} />
+          <NotFoundPage default />
+      </Router>
   </div>
   )}
 

@@ -1,10 +1,10 @@
 import React from "react";
-import PortfolioItem from "./PortfolioItem";
+import PortfolioItem from "../components/PortfolioItem";
+import Layout from "../components/layout";
 import highVolt from "../images/highvoltdigital.png";
 import typewriter from "../images/typewriter.jpg";
 import postcards from "../images/postcards.jpg";
 import "./Portfolio.css";
-import "./PortfolioItem.css";
 
 /** Component for Portfolio
  * 
@@ -18,12 +18,13 @@ import "./PortfolioItem.css";
  */
 
 function Portfolio({ projects }) {
-    console.debug("Portfolio projects", projects);
+    // console.debug("Portfolio projects", projects);
 
     return (
+        <Layout>
         <div className="Portfolio">
             <h1>Portfolio</h1>
-            {projects.projects.length > 0 &&
+            {/* {projects.projects.length > 0 &&
                 <div className="Portoflio-software">
                     <h2>Software Development</h2>
                     <div className="Potfolio-software-items">
@@ -32,7 +33,7 @@ function Portfolio({ projects }) {
                         )}
                     </div>
                 </div>
-            }
+            } */}
             <div className="Portoflio-more-projects">
                 <h2>More Projects</h2>
                 <div className="Portfolio-web-design">
@@ -60,6 +61,7 @@ function Portfolio({ projects }) {
                 </div>
             </div>
         </div>
+        </Layout>
     )
 }
 

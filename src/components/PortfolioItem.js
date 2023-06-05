@@ -1,5 +1,4 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import "./PortfolioItem.css";
 
 /** Component for PortfolioItem
@@ -19,9 +18,9 @@ function PortfolioItem({ project }) {
 
     return (
         <div className="PortfolioItem">
-            <Link to={project.website} target="_blank" rel="noopener noreferrer">
+            <a href={project.website} target="_blank" rel="noopener noreferrer">
                 <img src={project.image}></img>
-            </Link>
+            </a>
             <div>
                 <h3 className="PortfolioItem-name">{project.name}</h3>
                 <p className="PortfolioItem-language">
@@ -31,12 +30,12 @@ function PortfolioItem({ project }) {
                     {project.description}
                 </div>
                 <div className="PortfolioItem-links">
-                    <Link to={project.github} target="_blank" rel="noopener noreferrer">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer">
                         GitHub
-                    </Link>
-                    <Link to={project.website} target="_blank" rel="noopener noreferrer">
+                    </a>
+                    <a href={project.website} target="_blank" rel="noopener noreferrer">
                         Demo
-                    </Link>
+                    </a>
                 </div>
             </div>
     </div>

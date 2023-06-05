@@ -1,6 +1,7 @@
 import React from "react";
-import { Link } from "react-router-dom";
-import AboutTimeline from "./AboutTimeline";
+import { Link } from "gatsby";
+import AboutTimeline from "../components/AboutTimeline";
+import Layout from "../components/layout";
 import img from "../images/photo2.jpg";
 import "./About.css";
 
@@ -17,6 +18,7 @@ import "./About.css";
 
 function About() {
     return (
+        <Layout>
         <div>
             <div className="About">
                 <div className="About-bio">
@@ -47,8 +49,8 @@ function About() {
                         spot me in Victorian garb. Should coding not work out, I am
                         seeking full time employement as an ornamental hermit. If you
                         have an estate that could use a hermit, feel free to
-                        <Link to="http://julesharter.com/hire-a-hermit/"> peruse
-                            my proposal</Link>.
+                        <a href="http://julesharter.com/hire-a-hermit/"> peruse
+                            my proposal</a>.
                     </p>
                 </div>
                 <img className="About-image" src={img} />
@@ -59,8 +61,9 @@ function About() {
             <hr className="About-hr"></hr>
             <AboutTimeline />
             <hr className="About-hr"></hr>
-            <p className="About-resume">You can also download my resume <Link to="pdf">here</Link>.</p>
+            <p className="About-resume">You can also download my resume <a href="pdf">here</a>.</p>
         </div>
+        </Layout>
     )
 }
 
