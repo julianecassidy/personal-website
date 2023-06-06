@@ -1,3 +1,9 @@
+@media screen and (max-width: 600px) {
+    .AboutTimeline {
+        display: none;
+    }
+}
+
 .AboutTimeline {
     margin-left: 10%;
     margin-right: 10%;

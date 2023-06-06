@@ -52,6 +52,18 @@
     font-family: 'Econimica', sans-serif;
 }
 
+@media screen and (max-width: 600px) {
+    .Portfolio-dotted-line-right {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .Portfolio-dotted-line-left {
+        display: none;
+    }
+}
+
 .Portfolio-dotted-line-right {
     border-top: 2px dotted #FE5F55;
     border-right: 2px dotted #FE5F55;

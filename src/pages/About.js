@@ -1,6 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import AboutTimeline from "./AboutTimeline";
+import AboutTimeline from "../components/AboutTimeline";
 import img from "../images/photo2.jpg";
 import "./About.css";
 
@@ -55,7 +55,7 @@ function About() {
             <hr className="About-hr"></hr>
             <AboutTimeline />
             <hr className="About-hr"></hr>
-            <p className="About-resume">You can also download my resume <Link to="pdf">here</Link>.</p>
+            <p className="About-resume">You can download my resume <Link to="pdf">here</Link>.</p>
         </div>
     )
 }
