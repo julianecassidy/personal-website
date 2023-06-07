@@ -72,7 +72,7 @@
     color: #eaeaea;
 }
 
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 750px) {
     .Home-image img {
         display: none;
     }
@@ -129,8 +129,9 @@
     .Home-projects {
         position: absolute;
         margin-top: -15%;
+        margin-left: 3%;
         padding-top: 10px;
-        padding-left: 15px;
+        padding-left: 25px;
         padding-bottom: 10px;
         width: 200px;
         background: #eaeaea;
@@ -140,7 +141,13 @@
     }
 }
 
-.Home-projects h3 {
+@media screen and (min-width: 750px) {
+    .Home-projects-title {
+        display: none;
+    }
+}
+
+.Home-projects-title {
     margin-top: 3%;
     margin-bottom: 2%;
     font-family: 'Economica', sans-serif;

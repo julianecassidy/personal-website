@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import { v4 as uuid } from "uuid";
 import ProjectButton from "../components/ProjectButton";
-import img from "../images/blue.jpg";
+import img from "../images/blue.png";
 import "./Home.css";
 
 /** Component for Home
@@ -43,7 +43,7 @@ function Home({ projects }) {
                 <img src={displayImage} alt=""></img>
             </div>
             <div className="Home-projects">
-                <h3>Projects</h3>
+                <h3 className="Home-projects-title">Projects</h3>
                 <div>
                     {projects.projects.map((project, index) =>
                         <ProjectButton 
