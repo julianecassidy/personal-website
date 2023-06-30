@@ -17,13 +17,13 @@ function AboutTimeline() {
         <div className="AboutTimeline">
             <h2>How I Got Here</h2>
             <div className="AboutTimeline-line"></div>
-            {/* <div className="AboutTimeline-item">
+            <div className="AboutTimeline-item">
                 <h3 className="AboutTimeline-date">July 2023</h3>
                 <div className="AboutTimeline-left">
                     <h4>Software Engineer & Teaching Assistant</h4>
                     <h5>Rithm School</h5>
                 </div>
-            </div> */}
+            </div>
             <div className="AboutTimeline-line"></div>
             <div className="AboutTimeline-item">
                 <h3 className="AboutTimeline-date">February 2023</h3>
