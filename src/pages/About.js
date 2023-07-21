@@ -22,16 +22,17 @@ function About() {
                 <div className="About-bio">
                     <h2>Who I Am</h2>
                     <p>
-                        I am a teaching assistant and software engineer at Rithm School.
-                        My focus is on building and maintaining scalable and secure web
-                        apps with Node.js, React, and Python.
+                        I'm a software engineer and teaching assistant at Rithm School.
+                        Working with a team of instructors, I teach a fast-paced full 
+                        stack software development curriculum including JavaScript, 
+                        Python, and SQL.
                     </p>
                     <p>
-                        I am an enthusiastic problem solver and advocate for positive
-                        change. In my work, I have a particular knack for seeking out
-                        efficiencies and bring experience that combines technical skills,
-                        a strong writing ability, and extensive customer service, allowing
-                        me to connect with a variety of people.
+                        In my work, I am an enthusiastic problem solver always looking 
+                        for the next learning opportunity. My favorite days are those 
+                        that involve troubleshooting a bug. I bring a curiosity to 
+                        working in teams, creating space for multiple ideas and exploration. 
+                        I also prioritize self-sufficiency and independent learning.
                     </p>
                     <p>
                         Before transitioning into software engineering, I worked in web
