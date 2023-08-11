@@ -19,7 +19,7 @@ class ProjectApi {
      * website: "url.com"}
      */
     static async getRepos(projects) {
-        console.debug("getRepos");
+        // console.debug("getRepos");
         const projectsData = [];
         for (const proj of projects) {
             const resp = await axios.get(
@@ -37,7 +37,7 @@ class ProjectApi {
             projectsData.push(dataFormatted);
         } 
 
-        console.log("projectsData in API", projectsData);
+        // console.log("projectsData in API", projectsData);
 
         return projectsData;
         // return [{id: 123,

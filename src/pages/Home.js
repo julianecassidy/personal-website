@@ -19,11 +19,11 @@ import "./Home.css";
 
 function Home({ projects }) {
     const [displayImage, setDisplayImage] = React.useState(img);
-    console.log("Home state: ", displayImage, "projects: ", projects);
+    // console.log("Home state: ", displayImage, "projects: ", projects);
 
     /** On hover, update display image to project image. */
     function changeDisplayImage(index) {
-        console.debug("project at index", projects.projects[index.index])
+        // console.debug("project at index", projects.projects[index.index])
         setDisplayImage(projects.projects[index.index].image);
     }
 

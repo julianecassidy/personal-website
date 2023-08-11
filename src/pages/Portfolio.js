@@ -17,7 +17,7 @@ import "./Portfolio.css";
  */
 
 function Portfolio({ projects }) {
-    console.debug("Portfolio projects", projects);
+    // console.debug("Portfolio projects", projects);
 
     return (
         <div className="Portfolio">

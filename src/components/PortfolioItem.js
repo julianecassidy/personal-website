@@ -14,7 +14,7 @@ import "./PortfolioItem.css";
 
 function PortfolioItem({ project }) {
 
-    console.debug("PortfolioItem with project: ", project);
+    // console.debug("PortfolioItem with project: ", project);
 
     return (
         <div className="PortfolioItem">

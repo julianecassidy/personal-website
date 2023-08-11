@@ -24,13 +24,13 @@ const SCREENSHOTS = ['/jobify.png', '/flitter.png'];
 function App() {
 
   const [projects, setProjects] = React.useState([]);
-  console.debug("App state projects: ", projects);
+  // console.debug("App state projects: ", projects);
 
   /** Fetches repo details on page load. */
   React.useEffect(function fetchProjectDataOnLoad () {
       /** Get project data from GitHub API and set state with array of projects. */
       async function getProjectsFromApi() {
-          console.debug("getProjectsFromApi");
+          // console.debug("getProjectsFromApi");
           try {
               const projectsData = await ProjectApi.getRepos(PROJECTS_TO_DISPLAY);
 
