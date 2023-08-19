@@ -11,43 +11,37 @@ class ProjectApi {
     
     /** Make an API get request to GitHub to get repo information for the array
      * of repo names passed in. Return an array of repo information:
-     * {id: 123,
+     * [{id: 123,
      * name: "Friender Frontend",
      * description: "Some desc.",
      * language: "JavaScript",
      * github: "github/url.com",
-     * website: "url.com"}
+     * website: "url.com"}, ...]
      */
     static async getRepos(projects) {
         // console.debug("getRepos");
-        const projectsData = [];
+        const projectsPromises = [];
         for (const proj of projects) {
-            const resp = await axios.get(
+            const resp = axios.get(
                 `${BASE_URL}repos/julianecassidy/${proj}`,
             )
 
-            const dataFormatted = {};
-            dataFormatted["id"] = resp.data.id;
-            dataFormatted["name"] = this.formatRepoTitle(resp.data.name);
-            dataFormatted["description"] = resp.data.description;
-            dataFormatted["language"] = resp.data.language;
-            dataFormatted["github"] = resp.data.html_url;
-            dataFormatted["website"] = resp.data.homepage;
-
-            projectsData.push(dataFormatted);
+            projectsPromises.push(resp);
         } 
 
-        // console.log("projectsData in API", projectsData);
+        const projectsData = await Promise.all(projectsPromises);
+        const projectsDataFormatted = projectsData.map((project) => {
+            const dataFormatted = {};
+            dataFormatted["id"] = project.data.id;
+            dataFormatted["name"] = this.formatRepoTitle(project.data.name);
+            dataFormatted["description"] = project.data.description;
+            dataFormatted["language"] = project.data.language;
+            dataFormatted["github"] = project.data.html_url;
+            dataFormatted["website"] = project.data.homepage;
+            return dataFormatted;
+        })
 
-        return projectsData;
-        // return [{id: 123,
-        // name: "Sample Project",
-        // description: "test",
-        // language: "Python"},
-        // {id: 234,
-        //     name: "Sample Project",
-        //     description: "test",
-        //     language: "Python"}]
+        return projectsDataFormatted;
     }
     
     /** Take a slug style title and return a formatted version:
