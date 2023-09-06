@@ -45,16 +45,19 @@ function Home({ projects }) {
             </div>
             <div className="Home-projects">
                 <h3 className="Home-projects-title">Projects</h3>
-                <div>
-                    {projects.projects.map((project, index) =>
-                        <ProjectButton 
-                        key={uuid()}
-                        index={index} 
-                        project={project}
-                        changeDisplayImage={changeDisplayImage}
-                        />
-                        )}  
-                </div>
+                {projects?.projects.length > 0
+                ?
+                    <div>
+                        {projects.projects.map((project, index) =>
+                            <ProjectButton 
+                            key={uuid()}
+                            index={index} 
+                            project={project}
+                            changeDisplayImage={changeDisplayImage}
+                            />
+                            )}  
+                    </div>
+                : <p>Loading...</p>}
                 <Link to="/portfolio"><button className="Home-projects-button">
                     More Projects
                 </button></Link>

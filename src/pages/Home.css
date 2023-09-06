@@ -78,7 +78,7 @@
     }
 }
 
-@media screen and (max-width: 2000px) {
+@media screen and (max-width: 1200px) {
     .Home-image img {
     width: 80%;
     margin-top: -50vh;
@@ -89,7 +89,7 @@
     }
 }
 
-@media screen and (min-width: 2000px) {
+@media screen and (min-width: 1200px) {
     .Home-image img {
     width: 80%;
     margin-top: -30vh;
@@ -131,6 +131,7 @@
         padding-left: 15px;
         padding-bottom: 10px;
         width: 325px;
+        height: 200px;
         background: #eaeaea;
         border-radius: 10px;
         box-shadow: -1px -1px 10px #7A9E9F;
@@ -147,6 +148,7 @@
         padding-left: 25px;
         padding-bottom: 10px;
         width: 200px;
+        height: 200px;
         background: #eaeaea;
         border-radius: 10px;
         box-shadow: -1px -1px 10px #7A9E9F;
@@ -170,6 +172,7 @@
 }
 
 .Home-projects-button {
+    position: relative;
     margin: 5% 18px;
     width: 150px;
     height: 50px;
