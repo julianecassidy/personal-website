@@ -23,7 +23,7 @@ function Nav() {
             <div className="Nav-right">
                 <NavLink to="/about">About</NavLink>
                 <NavLink to="/portfolio">Portfolio</NavLink>
-                {/* <NavLink to="/blog">Blog</NavLink> */}
+                <NavLink to="/blog">Blog</NavLink>
             </div>
             <div className="Nav-social">
                 <SocialIcons />
