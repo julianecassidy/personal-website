@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import { BlogApi } from "../siteAPIs";
 import BlogPostCard from "../components/BlogPostCard";
+import "./Blog.css";
 
 /** Component for Blog
  * 
@@ -44,12 +45,14 @@ function Blog() {
 
     return (
         <div className="Blog">
+            <h1>Blog</h1>
             {posts.length === 0
                 ? <p>No posts to display.</p>
                 : posts.map(post =>
                     <BlogPostCard 
                       key={post.id} 
-                      slug={post.slug}
+                      id={post.id}
+                      permalink={post.permalink}
                       title={post.title}
                       content={post.content} 
                       date={post.date}

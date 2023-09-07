@@ -23,7 +23,7 @@ function RoutesList(projects) {
             <Route path="/about" element={<About />}></Route>
             <Route path="/portfolio" element={<Portfolio projects={projects} />}></Route>
             <Route path="/blog" element={<Blog />}></Route>
-            <Route path="/blog/:slug" element={<BlogPost />}></Route>
+            <Route path="/blog/:id/:permalink" element={<BlogPost />}></Route>
             <Route path="/" element={<Home projects={projects} />}></Route>
             <Route path="*" element={<Navigate to="/" />}></Route>
         </Routes>
