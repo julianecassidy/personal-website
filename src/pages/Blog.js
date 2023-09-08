@@ -31,7 +31,10 @@ function Blog() {
             console.debug("getPostsFromApi");
             try {
                 const posts = await BlogApi.getPosts();
-                setPosts(posts);
+                const postsFormatted = posts.map(post => ({
+                    ...post, [post.date]: formatDate(post.date)}))
+                console.log("postsFormatted", postsFormatted);
+                setPosts(postsFormatted);
             }
             catch (err) {
                 console.log(err);
@@ -41,14 +44,27 @@ function Blog() {
         getPostsFromApi();
     }, []);
 
-    if (isLoading) return <p>Loading...</p>;
+    /** Takes a UTC format date '2023-09-07T03:18:34.941Z' and returns it 
+     * in the format "mm-dd-yyy" */
+    function formatDate(UTCDate) {
+        const date = new Date(UTCDate).toLocaleDateString();
+        return date
+    }
+    
+
+    if (isLoading) return (
+        <div className="Blog-loading">
+            <p>Loading...</p>
+        </div>
+    )
 
     return (
         <div className="Blog">
             <h1>Blog</h1>
             {posts.length === 0
-                ? <p>No posts to display.</p>
-                : posts.map(post =>
+                ? <div className="Blog-no-posts"><p>No posts to display.</p></div>
+                : <div className="Blog-posts">
+                    {posts.map(post =>
                     <BlogPostCard 
                       key={post.id} 
                       id={post.id}
@@ -57,7 +73,8 @@ function Blog() {
                       content={post.content} 
                       date={post.date}
                     />
-                )
+                )}
+                </div>
             }
         </div>
     )
