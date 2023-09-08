@@ -32,8 +32,8 @@ function Blog() {
             try {
                 const posts = await BlogApi.getPosts();
                 const postsFormatted = posts.map(post => ({
-                    ...post, [post.date]: formatDate(post.date)}))
-                console.log("postsFormatted", postsFormatted);
+                    ...post, "date": formatDate(post.date)
+                }));
                 setPosts(postsFormatted);
             }
             catch (err) {
