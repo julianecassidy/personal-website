@@ -31,3 +31,22 @@
     font-family: 'Economica', sans-serif;
     color: #4F6367;
 }
+
+.Blog-loading p {
+    text-align: center;
+    font-family: 'Open-sans', sans-serif;
+    font-size: 16px;
+}
+
+.Blog-no-posts p {
+    text-align: center;
+    font-family: 'Open-sans', sans-serif;
+    font-size: 16px;
+}
+
+.Blog-posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}

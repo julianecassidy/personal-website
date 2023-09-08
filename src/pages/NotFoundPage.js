@@ -1,3 +1,4 @@
+import "./NotFoundPage.css";
 
 /** Component for NotFoundPage
  * 
@@ -12,7 +13,14 @@
 
 function NoutFoundPage() {
 
-  return <p>The page you are looking for doesn't exist. Hmmm...</p>
+  return (
+    <div className="NotFoundPage">
+      <p>The page you are looking for doesn't exist.</p>
+      <div className="NotFoundPage-button-div">
+        <button>Go Home</button>
+      </div>
+    </div>
+  )
 
   
 }
