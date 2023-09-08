@@ -44,6 +44,13 @@
     width: 300px;
 }
 
+.Portfolio-software-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: center;
+}
+
 .Portfolio-more-projects {
     display: flex;
 }

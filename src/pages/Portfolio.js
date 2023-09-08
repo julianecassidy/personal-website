@@ -25,7 +25,7 @@ function Portfolio({ projects }) {
             {projects.projects.length > 0 &&
                 <div className="Portoflio-software">
                     <h2>Software Development</h2>
-                    <div className="Potfolio-software-items">
+                    <div className="Portfolio-software-items">
                         {projects.projects.map(project => 
                             <PortfolioItem key={project.id} project={project} />
                         )}
