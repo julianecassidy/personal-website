@@ -103,7 +103,7 @@ class BlogApi {
      * date: 2023-09-06T22:23:59.146Z}
      */
     static async getPost(id) {
-        console.debug("getPost");
+        // console.debug("getPost");
         const resp = await axios.get(`${STRAPI_BASE_URL}personal-blogs/${id}`);
         const post = {
                 id: resp.data.data.id,

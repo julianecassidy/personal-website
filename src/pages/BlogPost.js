@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import ReactMarkdown from 'react-markdown';
 import { BlogApi } from '../siteAPIs';
 import NotFoundPage from './NotFoundPage';
+import './BlogPost.css';
 
 /** Component for BlogPost
  * 
@@ -21,7 +22,7 @@ function BlogPost() {
     const { id, permalink } = useParams();
     const [post, setPost] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
-    console.debug("BlogPost permalink: ", permalink, "post:", post);
+    // console.debug("BlogPost permalink: ", permalink, "post:", post);
 
     /** Fetches blog post on page load. */
     useEffect(function fetchPostOnLoad() {
@@ -29,7 +30,7 @@ function BlogPost() {
          * isLoading to false.
          */
         async function getPostFromApi() {
-            console.debug("getPostsFromApi");
+            // console.debug("getPostsFromApi");
             try {
                 const post = await BlogApi.getPost(id);
                 // check if permalink on post matches permalink in URL
@@ -48,7 +49,11 @@ function BlogPost() {
         getPostFromApi();
     }, [id, permalink]);
 
-    if(isLoading) return <p>Loading...</p>
+    if(isLoading) return (
+        <div className="BlogPost-loading">
+            <p>Loading...</p>
+        </div>
+    )
     if(!isLoading && post === null) return <NotFoundPage />
 
     return (
