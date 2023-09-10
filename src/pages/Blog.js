@@ -20,7 +20,7 @@ function Blog() {
     const [posts, setPosts] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
-    console.debug("Blog state posts: ", posts, "isLoading: ", isLoading);
+    // console.debug("Blog state posts: ", posts, "isLoading: ", isLoading);
 
     /** Fetches blog posts on page load. */
     useEffect(function fetchPostsOnLoad() {
@@ -28,7 +28,7 @@ function Blog() {
          * isLoading to false.
          */
         async function getPostsFromApi() {
-            console.debug("getPostsFromApi");
+            // console.debug("getPostsFromApi");
             try {
                 const posts = await BlogApi.getPosts();
                 const postsFormatted = posts.map(post => ({
