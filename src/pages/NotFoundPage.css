@@ -1,0 +1,35 @@
+.NotFoundPage {
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.NotFoundPage p {
+    text-align: center;
+    font-family: 'Open-sans', sans-serif;
+    font-size: 16px;
+}
+
+.NotFoundPage-button-div {
+    display: flex;
+    justify-content: center;
+}
+
+.NotFoundPage button {
+    position: relative;
+    margin-top: 2%;
+    width: 100px;
+    height: 40px;
+    background-color: #4F6367;
+    color: #eaeaea;
+    font-family: 'Open-sans', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    border: 0px;
+    transition: .3s;
+}
+
+.NotFoundPage button:hover {
+    cursor: pointer;
+    background-color: #FE5F55;
+}

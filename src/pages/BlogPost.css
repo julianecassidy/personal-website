@@ -1,0 +1,50 @@
+.BlogPost {
+    margin-top: 40px;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+
+.BlogPost h1 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Economica', sans-serif;
+    color: #4F6367;
+}
+
+.BlogPost h2 {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Economica', sans-serif;
+    color: #4F6367;
+}
+
+.BlogPost h3 {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-top: 3px;
+    margin-bottom: 2px;
+    font-family: 'Economica', sans-serif;
+    color: #4F6367;
+}
+
+.BlogPost-loading p {
+    text-align: center;
+    font-family: 'Open-sans', sans-serif;
+    font-size: 16px;
+}
+
+.BlogPost-content {
+    margin-top: 20px;
+}
+
+.BlogPost-content p {
+    text-align: left;
+    font-family: 'Open-sans', sans-serif;
+    font-size: 16px; 
+}

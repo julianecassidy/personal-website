@@ -1,6 +1,7 @@
 import axios from "axios";
 
-const BASE_URL = "https://api.github.com/";
+const GITHUB_BASE_URL = "https://api.github.com/";
+const STRAPI_BASE_URL = process.env.REACT_APP_STRAPI_URL || "http://localhost:1337/api/";
 
 /** Project API Class.
  * 
@@ -23,7 +24,7 @@ class ProjectApi {
         const projectsPromises = [];
         for (const proj of projects) {
             const resp = axios.get(
-                `${BASE_URL}repos/julianecassidy/${proj}`,
+                `${GITHUB_BASE_URL}repos/julianecassidy/${proj}`,
             )
 
             projectsPromises.push(resp);
@@ -62,4 +63,60 @@ class ProjectApi {
     }
 }
 
-export default ProjectApi;
+/** Blog Post API Class.
+ * Static class tying to get blog posts from Strapi API.
+ * 
+ */
+class BlogApi {
+
+    /** Make an API get request to Strapi to get all blog posts in the personal-blog 
+     * content-type. Returns an array of post data:
+     * [{id: 1,
+     * title: "Title",
+     * permalink: "title",
+     * content: 'Lorem ipusm.'
+     * date: 2023-09-06T22:23:59.146Z}, ... ]
+     */
+    static async getPosts() {
+        console.debug("getPosts");
+        const resp = await axios.get(`${STRAPI_BASE_URL}personal-blogs`);
+        const posts = resp.data.data.map(post => {
+            const data = {
+                id: post.id,
+                title: post.attributes.Title,
+                permalink: post.attributes.Permalink,
+                content: post.attributes.Content,
+                date: post.attributes.publishedAt,
+            };
+            return data;
+        })
+
+        return posts;
+    }
+
+    /** Make an API get request to Strapi to get a single blog post by id.
+     * Returns a formatted object of all post data:
+     * {id: 1,
+     * title: "Title",
+     * permalink: "title",
+     * content: 'Lorem ipusm.'
+     * date: 2023-09-06T22:23:59.146Z}
+     */
+    static async getPost(id) {
+        // console.debug("getPost");
+        const resp = await axios.get(`${STRAPI_BASE_URL}personal-blogs/${id}`);
+        const post = {
+                id: resp.data.data.id,
+                permalink: resp.data.data.attributes.Permalink,
+                title: resp.data.data.attributes.Title,
+                content: resp.data.data.attributes.Content,
+                date: resp.data.data.attributes.publishedAt,
+            };
+
+        return post;
+    }
+
+}
+
+
+export { ProjectApi, BlogApi };
