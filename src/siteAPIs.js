@@ -78,7 +78,7 @@ class BlogApi {
      * date: 2023-09-06T22:23:59.146Z}, ... ]
      */
     static async getPosts() {
-        console.debug("getPosts");
+        // console.debug("getPosts");
         const resp = await axios.get(`${STRAPI_BASE_URL}personal-blogs`);
         const posts = resp.data.data.map(post => {
             const data = {
