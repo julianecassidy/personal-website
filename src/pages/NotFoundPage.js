@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import "./NotFoundPage.css";
 
 /** Component for NotFoundPage
@@ -17,7 +18,7 @@ function NoutFoundPage() {
     <div className="NotFoundPage">
       <p>The page you are looking for doesn't exist.</p>
       <div className="NotFoundPage-button-div">
-        <button>Go Home</button>
+        <Link to="/home"><button>Go Home</button></Link>
       </div>
     </div>
   )
