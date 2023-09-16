@@ -2,6 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import AboutTimeline from "../components/AboutTimeline";
 import img from "../images/photo2.jpg";
+import resume from "../resume.pdf";
 import "./About.css";
 
 /** Component for About
@@ -56,7 +57,7 @@ function About() {
             <hr className="About-hr"></hr>
             <AboutTimeline />
             <hr className="About-hr"></hr>
-            <p className="About-resume">You can download my resume <Link to="pdf">here</Link>.</p>
+            <p className="About-resume">You can see my resume <Link to={resume} target="blank">here</Link>.</p>
         </div>
     )
 }
