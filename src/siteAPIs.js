@@ -10,7 +10,7 @@ const STRAPI_SORT_PARAM = "?sort=publishedAt:desc";
  * API.
  */
 class ProjectApi {
-    
+
     /** Make an API get request to GitHub to get repo information for the array
      * of repo names passed in. Return an array of repo information:
      * [{id: 123,
@@ -29,7 +29,7 @@ class ProjectApi {
             )
 
             projectsPromises.push(resp);
-        } 
+        }
 
         const projectsData = await Promise.all(projectsPromises);
         const projectsDataFormatted = projectsData.map((project) => {
@@ -45,13 +45,13 @@ class ProjectApi {
 
         return projectsDataFormatted;
     }
-    
+
     /** Take a slug style title and return a formatted version:
      * "friender-frontend" -> "Friender Frontend"
      */
     static formatRepoTitle(title) {
         let newTitle = title[0].toUpperCase();
-        for (let i = 1; i < title.length; i++){
+        for (let i = 1; i < title.length; i++) {
             if (title[i] === '-') {
                 newTitle += ' '
                 newTitle += title[i + 1].toUpperCase();
@@ -103,20 +103,29 @@ class BlogApi {
      * title: "Title",
      * permalink: "title",
      * content: 'Lorem ipusm.'
-     * date: 2023-09-06T22:23:59.146Z}
+     * date: 2023-09-06T22:23:59.146Z,
+     * canonical: "https://julianecassidy.com/blog/2"}
      */
     static async getPost(id) {
         // console.debug("getPost");
         const resp = await axios.get(`${STRAPI_BASE_URL}personal-blogs/${id}`);
         const post = {
-                id: resp.data.data.id,
-                permalink: resp.data.data.attributes.Permalink,
-                title: resp.data.data.attributes.Title,
-                content: resp.data.data.attributes.Content,
-                date: resp.data.data.attributes.publishedAt,
-            };
+            id: resp.data.data.id,
+            permalink: resp.data.data.attributes.Permalink,
+            title: resp.data.data.attributes.Title,
+            content: resp.data.data.attributes.Content,
+            date: resp.data.data.attributes.publishedAt,
+            canonical: resp.data.data.attributes.Canonical,
+        };
 
         return post;
+    }
+
+    /** Takes a UTC format date '2023-09-07T03:18:34.941Z' and returns it 
+    * in the format "mm-dd-yyy" */
+    static formatDate(UTCDate) {
+        const date = new Date(UTCDate).toLocaleDateString();
+        return date
     }
 
 }

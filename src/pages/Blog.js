@@ -32,7 +32,7 @@ function Blog() {
             try {
                 const posts = await BlogApi.getPosts();
                 const postsFormatted = posts.map(post => ({
-                    ...post, "date": formatDate(post.date)
+                    ...post, "date": BlogApi.formatDate(post.date)
                 }));
                 setPosts(postsFormatted);
             }
@@ -43,14 +43,7 @@ function Blog() {
         }
         getPostsFromApi();
     }, []);
-
-    /** Takes a UTC format date '2023-09-07T03:18:34.941Z' and returns it 
-     * in the format "mm-dd-yyy" */
-    function formatDate(UTCDate) {
-        const date = new Date(UTCDate).toLocaleDateString();
-        return date
-    }
-    
+   
 
     if (isLoading) return (
         <div className="Blog-loading">

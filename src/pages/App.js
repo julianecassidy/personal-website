@@ -1,5 +1,6 @@
 import * as React from "react"
 import { BrowserRouter } from "react-router-dom";
+import { HelmetProvider } from "react-helmet-async";
 import { ProjectApi } from "../siteAPIs";
 import Nav from "../components/Nav";
 import RoutesList from "../RoutesList";
@@ -27,33 +28,38 @@ function App() {
   // console.debug("App state projects: ", projects);
 
   /** Fetches repo details on page load. */
-  React.useEffect(function fetchProjectDataOnLoad () {
-      /** Get project data from GitHub API and set state with array of projects. */
-      async function getProjectsFromApi() {
-          // console.debug("getProjectsFromApi");
-          try {
-              const projectsData = await ProjectApi.getRepos(PROJECTS_TO_DISPLAY);
+  React.useEffect(function fetchProjectDataOnLoad() {
+    /** Get project data from GitHub API and set state with array of projects. */
+    async function getProjectsFromApi() {
+      // console.debug("getProjectsFromApi");
+      try {
+        const projectsData = await ProjectApi.getRepos(PROJECTS_TO_DISPLAY);
 
-              for (let i = 0; i < projectsData.length; i++) {
-                projectsData[i]["image"] = SCREENSHOTS[i];
-              }
+        for (let i = 0; i < projectsData.length; i++) {
+          projectsData[i]["image"] = SCREENSHOTS[i];
+        }
 
-              setProjects(projectsData);
-          } catch (err) {
-              console.log(err);
-              setProjects([]);
-          }
-      } 
-      getProjectsFromApi();
+        setProjects(projectsData);
+      } catch (err) {
+        console.log(err);
+        setProjects([]);
+      }
+    }
+    getProjectsFromApi();
   }, []);
 
+  const helmetContext = {};
+
   return (<div className="App">
-    <BrowserRouter>
+    <HelmetProvider context={helmetContext}>
+      <BrowserRouter>
         <Nav />
         <RoutesList projects={projects} />
-    </BrowserRouter>
-    <Footer />
+      </BrowserRouter>
+      <Footer />
+    </HelmetProvider>
   </div>
-  )}
+  )
+}
 
 export default App;
