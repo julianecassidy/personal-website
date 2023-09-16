@@ -2,6 +2,7 @@ import axios from "axios";
 
 const GITHUB_BASE_URL = "https://api.github.com/";
 const STRAPI_BASE_URL = process.env.REACT_APP_STRAPI_URL || "http://localhost:1337/api/";
+const STRAPI_SORT_PARAM = "?sort=publishedAt:desc";
 
 /** Project API Class.
  * 
@@ -79,7 +80,9 @@ class BlogApi {
      */
     static async getPosts() {
         // console.debug("getPosts");
-        const resp = await axios.get(`${STRAPI_BASE_URL}personal-blogs`);
+        const resp = await axios.get(
+            `${STRAPI_BASE_URL}personal-blogs${STRAPI_SORT_PARAM}`
+        );
         const posts = resp.data.data.map(post => {
             const data = {
                 id: post.id,
