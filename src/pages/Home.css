@@ -1,6 +1,9 @@
 @media screen and (max-width: 600px) {
     .Home {
-        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
         margin-bottom: 55%;
     }
 }
@@ -14,9 +17,10 @@
 
 @media screen and (max-width: 600px) {
     .Home-block {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
         margin-top: 30px;
-        margin-left: 5%;
-        margin-right: 0%;
         padding: 2% 3% 2% 0%;
         background-color: #7a9e9fe0;
         border-radius: 5px;
@@ -47,6 +51,7 @@
 
 .Home-text {
     padding-right: 4%;
+    flex-basis: 100%;
 }
 
 .Home-text h1 {
@@ -100,8 +105,11 @@
     }
 }
 
-.Home-nav {
-    margin-right: 5%;
+@media screen and (min-width: 600px) {
+
+    .Home-nav {
+        margin-right: 5%;
+    }
 }
 
 .Home-nav button {
@@ -124,14 +132,16 @@
 
 @media screen and (max-width: 600px) {
     .Home-projects {
-        position: absolute;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         margin-top: 5%;
-        margin-left: 3%;
         padding-top: 10px;
         padding-left: 15px;
         padding-bottom: 10px;
         width: 325px;
-        height: 200px;
+        height: 275px;
         background: #eaeaea;
         border-radius: 10px;
         box-shadow: -1px -1px 10px #7A9E9F;
@@ -163,6 +173,7 @@
 }
 
 .Home-projects-title {
+    flex-basis: 90%;
     margin-top: 3%;
     margin-bottom: 2%;
     font-family: 'Economica', sans-serif;
@@ -173,6 +184,7 @@
 
 .Home-projects-button {
     position: relative;
+    flex-basis: 95%;
     margin: 5% 18px;
     width: 150px;
     height: 50px;

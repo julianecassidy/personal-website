@@ -1,6 +1,6 @@
 .Portfolio {
-    margin-left: 5%;
-    margin-right: 5%;
+    margin-left: 3%;
+    margin-right: 3%;
 }
 
 .Portfolio h1 {
@@ -47,7 +47,7 @@
 .Portfolio-software-items {
     display: flex;
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
     justify-content: center;
 }
 

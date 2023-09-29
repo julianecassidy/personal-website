@@ -1,17 +1,35 @@
-.About {
-    display: flex;
-    padding: 3%;
+@media screen and (max-width: 600px) {
+    .About {
+        display: flex;
+        flex-wrap: wrap-reverse;
+        padding: 3% 0% 3% 5%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .About {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 3%;
+    }
 }
 
 .About a {
     text-decoration: none;
 }
 
-.About-bio {
-    display: flex;
-    flex-wrap: wrap;
-    margin-left: 3%;
-    width: 60%;
+@media screen and (max-width: 600px) {
+    .About-bio {
+        margin-left: 3%;
+        width: 80%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .About-bio {
+        margin-left: 3%;
+        width: 60%;
+    }
 }
 
 .About-bio h2 {
@@ -27,18 +45,29 @@
     font-size: 18px;
 }
 
-.About-image {
-    float: right;
-    margin-top: 7%;
-    margin-left: 50px;
-    height: 300px;
-    border-radius: 10px;
-    z-index: 10;
+@media screen and (max-width: 600px) {
+    .About-image {
+        margin-top: 7%;
+        margin-left: auto;
+        margin-right: auto;
+        height: 300px;
+        border-radius: 10px;
+        z-index: 10; 
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .About-image {
+        margin-top: 7%;
+        margin-left: 7%;
+        height: 300px;
+        border-radius: 10px;
+        z-index: 10; 
+    }
 }
 
 .About-image-background {
-    margin-top: 9%;
-    margin-left: -220px;
+    position: relative;
     background-color: #B8D8D8;
     border-radius: 10px;
     height: 300px;
