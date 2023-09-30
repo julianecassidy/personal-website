@@ -1,5 +1,6 @@
-import React from "react";
-import { NavLink } from "react-router-dom";
+import { useState } from "react";
+import { Link } from "react-router-dom";
+import { slide as Menu } from 'react-burger-menu';
 import "./MobileNav.css";
 
 /** Component for MobileNav
@@ -9,26 +10,42 @@ import "./MobileNav.css";
  * - none
  * 
  * State:
- * - none
+ * - menuOpen: boolean for whether the menu should show
  * 
- * Nav -> MobileNav
+ * App -> MobileNav
  */
+function MobileNav() {
+    const [menuOpen, setMenuOpen] = useState(false);
+    console.debug("MobileNav");
 
+    /** Keep menuOpen in sync with menu state. */
+    function toggleMenuState(state) {
+        setMenuOpen(state.isOpen);
+    }
 
-function MobileNav({ toggle }) {
-
-    /** Handle click of "x" button. */
-    function handleClick() {
-        toggle();
+    /** Close menu. */
+    function closeMenu() {
+        setMenuOpen(false);
     }
 
     return (
-        <div className="MobileNav">
-            <div className="MobileNav-exit" onClick={handleClick}>x</div>
-            <NavLink to="/about">About</NavLink>
-            <NavLink to="/portfolio">Portfolio</NavLink>
-            <NavLink to="/blog">Blog</NavLink>
-        </div>
+        <Menu
+            right
+            isOpen={menuOpen}
+            onStateChange={(state) => toggleMenuState(state)}
+        >
+            <div className="MobileNav">
+                <div className="MobileNav-item">
+                    <Link to="/about" onClick={closeMenu}>About</Link>
+                </div>
+                <div className="MobileNav-item">
+                    <Link to="/portfolio" onClick={closeMenu}>Portfolio</Link>
+                </div>
+                <div className="MobileNav-item">
+                    <Link to="/blog" onClick={closeMenu}>Blog</Link>
+                </div>
+            </div>
+        </Menu>
     )
 }
 

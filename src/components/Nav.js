@@ -1,8 +1,6 @@
-import { useState } from "react";
 import { NavLink } from "react-router-dom";
 import SocialIcons from "./SocialIcons";
 import "./Nav.css";
-import MobileNav from "./MobileNav";
 
 /** Component for Nav
  *  UI element for navigation bar.
@@ -11,23 +9,13 @@ import MobileNav from "./MobileNav";
  * - none
  * 
  * State:
- * - hambergerOpen: boolean
+ * - none
  * 
  * App -> Nav
  */
 
 function Nav() {
-
-    const [hamburgerOpen, setHamburgerOpen] = useState(false);
-
-    /** Change hamburgerOpen to opposite of current value. */
-    function toggleHamburger() {
-        setHamburgerOpen(hamburgerOpen => !hamburgerOpen);
-    }
-
-    if (hamburgerOpen) {
-        return <MobileNav toggle={toggleHamburger} />
-    }
+    console.debug("Nav");
 
     return (
         <nav className="Nav">
@@ -39,11 +27,6 @@ function Nav() {
             </div>
             <div className="Nav-social">
                 <SocialIcons />
-            </div>
-            <div className="Nav-hamburger" onClick={toggleHamburger}>
-                <div className="Nav-hamburger-line"></div>
-                <div className="Nav-hamburger-line"></div>
-                <div className="Nav-hamburger-line"></div>
             </div>
         </nav>
 
