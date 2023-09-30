@@ -47,6 +47,7 @@ function Blog() {
 
     if (isLoading) return (
         <div className="Blog-loading">
+            <h1>Blog</h1>
             <p>Loading...</p>
         </div>
     )
