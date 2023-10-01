@@ -50,9 +50,6 @@ function About() {
                     </p>
                 </div>
                 <img className="About-image" src={img} alt="" />
-                <div className="About-image-background"></div>
-                <div>
-                </div>
             </div>
             <hr className="About-hr"></hr>
             <AboutTimeline />

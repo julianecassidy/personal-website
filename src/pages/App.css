@@ -11,3 +11,17 @@ p a:hover {
 body {
     background-color: #eaeaea;
 }
+
+@media screen and (max-width: 599px) {
+    .App-nav-hamburger {
+        margin-left: auto;
+        margin-right: 1%;
+        margin-bottom: -4px;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .App-nav-hamburger {
+        display: none;
+    }
+}

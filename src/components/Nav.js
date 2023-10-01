@@ -1,4 +1,3 @@
-import React from "react";
 import { NavLink } from "react-router-dom";
 import SocialIcons from "./SocialIcons";
 import "./Nav.css";
@@ -16,6 +15,7 @@ import "./Nav.css";
  */
 
 function Nav() {
+    console.debug("Nav");
 
     return (
         <nav className="Nav">

@@ -3,6 +3,7 @@ import { BrowserRouter } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import { ProjectApi } from "../siteAPIs";
 import Nav from "../components/Nav";
+import MobileNav from "../components/MobileNav";
 import RoutesList from "../RoutesList";
 import Footer from "../components/Footer";
 import './App.css';
@@ -53,6 +54,9 @@ function App() {
   return (<div className="App">
     <HelmetProvider context={helmetContext}>
       <BrowserRouter>
+      <div className="App-nav-hamburger">
+        <MobileNav pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+      </div>
         <Nav />
         <RoutesList projects={projects} />
       </BrowserRouter>
