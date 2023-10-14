@@ -92,9 +92,36 @@ class BlogApi {
                 permalink: post.attributes.Permalink,
                 content: post.attributes.Content,
                 date: post.attributes.publishedAt,
-                tags: post.attributes.categories.data.map(category =>
-                    category.attributes.Tag),
             };
+            return data;
+        })
+
+        return posts;
+    }
+
+    /** Make an API get request to Strapi to get all blog posts with the given
+     * tag by tag ID. Returns an array of post data:
+     * [{id: 1,
+     * title: "Title",
+     * permalink: "title",
+     * content: 'Lorem ipusm.'
+     * date: 2023-09-06T22:23:59.146Z
+     * tags: {categoryData}}, ... ]
+     */
+    static async getTaggedPosts(tag_id) {
+        // console.debug("getTaggedPosts");
+        const resp = await axios.get(
+            `${STRAPI_BASE_URL}categories/${tag_id}?${STAPI_RELATION_PARAM}`
+        );
+
+        const posts = resp.data.data.attributes.personal_blogs.data.map(post => {
+            const data = {
+                id: post.id,
+                title: post.attributes.Title,
+                permalink: post.attributes.Permalink,
+                content: post.attributes.Content,
+                date: post.attributes.publishedAt,
+                };
             return data;
         })
 
@@ -122,9 +149,15 @@ class BlogApi {
             content: resp.data.data.attributes.Content,
             date: resp.data.data.attributes.publishedAt,
             canonical: resp.data.data.attributes.Canonical,
-            tags: resp.data.data.attributes.categories.data.map(category =>
-                category.attributes.Tag),
-        };
+            tags: 
+                resp.data.data.attributes.categories.data.map(category =>{
+                    const tag = {
+                        name: category.attributes.Tag,
+                        id: category.id,
+                    }
+                    return tag;
+                }),
+            }
 
         return post;
     }

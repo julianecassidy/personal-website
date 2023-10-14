@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import ReactMarkdown from 'react-markdown';
 import { BlogApi } from '../siteAPIs';
@@ -23,7 +23,7 @@ function BlogPost() {
     const { id, permalink } = useParams();
     const [post, setPost] = useState(null);
     const [isLoading, setIsLoading] = useState(true);
-    console.debug("BlogPost", "post:", post);
+    // console.debug("BlogPost", "post:", post);
 
     /** Fetches blog post on page load. */
     useEffect(function fetchPostOnLoad() {
@@ -67,7 +67,9 @@ function BlogPost() {
             <h1>{post.title}</h1>
             <div className="BlogPost-tags">
                 {post.tags.map(tag => 
-                    <span key={tag}>{tag}</span>)
+                    <Link to={`/blog/tags/${tag.id}/${tag.name}`} key={tag.name}>
+                        <span>{tag.name}</span>
+                    </Link>)
                 }
             </div>
             <div className="BlogPost-date">Published on: {post.date}</div>

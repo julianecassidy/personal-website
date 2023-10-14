@@ -66,7 +66,6 @@ function Blog() {
                       title={post.title}
                       content={post.content} 
                       date={post.date}
-                      tags={post.tags}
                     />
                 )}
                 </div>

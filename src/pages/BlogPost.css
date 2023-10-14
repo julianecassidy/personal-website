@@ -70,6 +70,10 @@
     }
 }
 
+.BlogPost-tags span {
+    margin: 10px;
+}
+
 .BlogPost-tags {
     font-family: 'Economica', sans-serif;
     font-size: 14px;
@@ -77,8 +81,13 @@
     text-align: center; 
 }
 
-.BlogPost-tags span {
-    margin: 10px;
+.BlogPost-tags a {
+    color: #FE5F55;
+    text-decoration: none;
+}
+
+.BlogPost-tags a:hover {
+    color: #4F6367;
 }
 
 .BlogPost-date {
