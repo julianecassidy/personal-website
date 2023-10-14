@@ -1,6 +1,6 @@
 import React from "react";
 import PortfolioItem from "../components/PortfolioItem";
-import highVolt from "../images/highvoltdigital.png";
+import website from "../images/website.png";
 import typewriter from "../images/typewriter.jpg";
 import postcards from "../images/postcards.jpg";
 import "./Portfolio.css";
@@ -35,7 +35,7 @@ function Portfolio({ projects }) {
             <div className="Portoflio-more-projects">
                 <h2>More Projects</h2>
                 <div className="Portfolio-web-design">
-                    <img src={highVolt} alt=""></img>
+                    <img src={website} alt=""></img>
                     <div className="Portfolio-project-desc">
                         <h3>Web Design</h3>
                         <p>Modern, intuitive, and attractive web designs built around a business's brand.</p>
