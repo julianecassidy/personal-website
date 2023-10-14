@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import AboutTimeline from "../components/AboutTimeline";
-import img from "../images/photo2.jpg";
+import headshot from "../images/headshot.jpg";
 import resume from "../resume.pdf";
 import "./About.css";
 
@@ -49,7 +49,7 @@ function About() {
                         spot me in Victorian garb.
                     </p>
                 </div>
-                <img className="About-image" src={img} alt="" />
+                <img className="About-image" src={headshot} alt="" />
             </div>
             <hr className="About-hr"></hr>
             <AboutTimeline />
