@@ -16,7 +16,7 @@ import "./MobileNav.css";
  */
 function MobileNav() {
     const [menuOpen, setMenuOpen] = useState(false);
-    console.debug("MobileNav");
+    // console.debug("MobileNav");
 
     /** Keep menuOpen in sync with menu state. */
     function toggleMenuState(state) {
