@@ -12,7 +12,7 @@ import './BlogPost.css';
  * - none
  * 
  * State:
- * - post: {id, permalink, title, content, date, canonical}
+ * - post: {id, permalink, title, content, date, canonical, tags}
  * - isLoading: boolean
  * 
  * Routes -> BlogPost
@@ -65,6 +65,11 @@ function BlogPost() {
                 </Helmet>
             }
             <h1>{post.title}</h1>
+            <div className="BlogPost-tags">
+                {post.tags.map(tag => 
+                    <span key={tag}>{tag}</span>)
+                }
+            </div>
             <div className="BlogPost-date">Published on: {post.date}</div>
             <div className='BlogPost-content'>
                 <ReactMarkdown>{post.content}</ReactMarkdown>

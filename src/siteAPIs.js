@@ -2,7 +2,8 @@ import axios from "axios";
 
 const GITHUB_BASE_URL = "https://api.github.com/";
 const STRAPI_BASE_URL = process.env.REACT_APP_STRAPI_URL || "http://localhost:1337/api/";
-const STRAPI_SORT_PARAM = "?sort=publishedAt:desc";
+const STRAPI_SORT_PARAM = "sort=publishedAt:desc";
+const STAPI_RELATION_PARAM = "populate=*";
 
 /** Project API Class.
  * 
@@ -76,12 +77,13 @@ class BlogApi {
      * title: "Title",
      * permalink: "title",
      * content: 'Lorem ipusm.'
-     * date: 2023-09-06T22:23:59.146Z}, ... ]
+     * date: 2023-09-06T22:23:59.146Z
+     * tags: {categoryData}}, ... ]
      */
     static async getPosts() {
         // console.debug("getPosts");
         const resp = await axios.get(
-            `${STRAPI_BASE_URL}personal-blogs${STRAPI_SORT_PARAM}`
+            `${STRAPI_BASE_URL}personal-blogs?${STRAPI_SORT_PARAM}&${STAPI_RELATION_PARAM}`
         );
         const posts = resp.data.data.map(post => {
             const data = {
@@ -90,6 +92,8 @@ class BlogApi {
                 permalink: post.attributes.Permalink,
                 content: post.attributes.Content,
                 date: post.attributes.publishedAt,
+                tags: post.attributes.categories.data.map(category =>
+                    category.attributes.Tag),
             };
             return data;
         })
@@ -104,11 +108,13 @@ class BlogApi {
      * permalink: "title",
      * content: 'Lorem ipusm.'
      * date: 2023-09-06T22:23:59.146Z,
-     * canonical: "https://julianecassidy.com/blog/2"}
+     * canonical: "https://julianecassidy.com/blog/2",
+     * tags: ["test", "other"]}
      */
     static async getPost(id) {
         // console.debug("getPost");
-        const resp = await axios.get(`${STRAPI_BASE_URL}personal-blogs/${id}`);
+        const resp = await axios.get(
+            `${STRAPI_BASE_URL}personal-blogs/${id}?${STAPI_RELATION_PARAM}`);
         const post = {
             id: resp.data.data.id,
             permalink: resp.data.data.attributes.Permalink,
@@ -116,6 +122,8 @@ class BlogApi {
             content: resp.data.data.attributes.Content,
             date: resp.data.data.attributes.publishedAt,
             canonical: resp.data.data.attributes.Canonical,
+            tags: resp.data.data.attributes.categories.data.map(category =>
+                category.attributes.Tag),
         };
 
         return post;

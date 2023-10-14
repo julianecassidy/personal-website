@@ -70,7 +70,19 @@
     }
 }
 
+.BlogPost-tags {
+    font-family: 'Economica', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: center; 
+}
+
+.BlogPost-tags span {
+    margin: 10px;
+}
+
 .BlogPost-date {
+    margin-top: 20px;
     font-family: 'Economica', sans-serif;
     font-size: 12px;
     text-transform: uppercase;
