@@ -1,0 +1,14 @@
+.TagList-item {
+    margin: 5px 0px;
+    font-family: 'Economica', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase;
+    text-align: left; 
+}
+.TagList-item a {
+    color: #FE5F55;
+    text-decoration: none;
+}
+.TagList-item a:hover {
+    color: #4F6367;
+}

@@ -1,9 +1,9 @@
-.Blog {
+.BlogPostsByTag {
     margin-left: 5%;
     margin-right: 5%;
 }
 
-.Blog h1 {
+.BlogPostsByTag h1 {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -13,7 +13,7 @@
     color: #4F6367;
 }
 
-.Blog h2 {
+.BlogPostsByTag h2 {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -23,7 +23,7 @@
     color: #4F6367;
 }
 
-.Blog h3 {
+.BlogPostsByTag h3 {
     padding-left: 10px;
     padding-right: 10px;
     margin-top: 3px;
@@ -32,11 +32,11 @@
     color: #4F6367;
 }
 
-.Blog-page-content {
+.BlogPostsByTag-page-content {
     display: flex;
 }
 
-.Blog-loading h1 {
+.BlogPostsByTag-loading h1 {
     display: flex;
     flex-direction: column;
     flex: 1;
@@ -46,20 +46,20 @@
     color: #4F6367;
 }
 
-.Blog-loading p {
+.BlogPostsByTag-loading p {
     text-align: center;
     font-family: 'Open-sans', sans-serif;
     font-size: 16px;
 }
 
-.Blog-no-posts p {
+.BlogPostsByTag-no-posts p {
     text-align: center;
     font-family: 'Open-sans', sans-serif;
     font-size: 16px;
 }
 
 @media screen and (max-width: 600px) {
-    .Blog-posts {
+    .BlogPostsByTag-posts {
         display: flex;
         flex-wrap: wrap;
         gap: 10px;
@@ -68,7 +68,7 @@
     }
 }
 
-.Blog-posts {
+.BlogPostsByTag-posts {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
@@ -76,7 +76,7 @@
     width: 80%;
 }
 
-.Blog-tags {
+.BlogPostsByTag-tags {
     width: 100px;
     min-height: 200px;
     padding-left: 25px;

@@ -1,8 +1,9 @@
 import { useState, useEffect } from 'react';
-import { useParams } from 'react-router-dom';
+import { useParams, Link } from 'react-router-dom';
 import { Helmet } from 'react-helmet-async';
 import ReactMarkdown from 'react-markdown';
 import { BlogApi } from '../siteAPIs';
+import TagList from '../components/TagList';
 import NotFoundPage from './NotFoundPage';
 import './BlogPost.css';
 
@@ -12,18 +13,19 @@ import './BlogPost.css';
  * - none
  * 
  * State:
- * - post: {id, permalink, title, content, date, canonical}
+ * - post: {id, permalink, title, content, date, canonical, tags}
  * - isLoading: boolean
  * 
- * Routes -> BlogPost
+ * Routes -> BlogPost -> TagList
  */
 
 function BlogPost() {
 
     const { id, permalink } = useParams();
     const [post, setPost] = useState(null);
+    const [tags, setTags] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
-    console.debug("BlogPost", "post:", post);
+    // console.debug("BlogPost", "post:", post);
 
     /** Fetches blog post on page load. */
     useEffect(function fetchPostOnLoad() {
@@ -47,7 +49,22 @@ function BlogPost() {
 
             setIsLoading(false);
         }
+
+        /** Get tags from Strapi API and set state with the response.
+        */
+        async function getTagsFromApi() {
+            // console.debug("getTagsFromApi");
+            try {
+                const tags = await BlogApi.getTags();
+                setTags(tags);
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
+
         getPostFromApi();
+        getTagsFromApi();
     }, [id, permalink]);
 
     if (isLoading) return (
@@ -64,12 +81,27 @@ function BlogPost() {
                     <link rel="canonical" href={post.canonical} />
                 </Helmet>
             }
-            <h1>{post.title}</h1>
-            <div className="BlogPost-date">Published on: {post.date}</div>
-            <div className='BlogPost-content'>
-                <ReactMarkdown>{post.content}</ReactMarkdown>
+            <div className="BlogPost-page-content">
+                <div className="BlogPost-post">
+                    <h1>{post.title}</h1>
+                    <div className="BlogPost-tags">
+                        {post.tags.map(tag =>
+                            <Link to={`/blog/tags/${tag.id}/${tag.name}`} key={tag.name}>
+                                <span>{tag.name}</span>
+                            </Link>)
+                        }
+                    </div>
+                    <div className="BlogPost-date">Published on: {post.date}</div>
+                    <div className='BlogPost-content'>
+                        <ReactMarkdown>{post.content}</ReactMarkdown>
+                    </div>
+                </div>
+                <div className="BlogPost-tag-sidebar">
+                    <h3>Explore More</h3>
+                    <TagList tags={tags} />
+                </div>
             </div>
-        </div>
+        </div >
     )
 
 

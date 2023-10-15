@@ -15,7 +15,7 @@ import "./Nav.css";
  */
 
 function Nav() {
-    console.debug("Nav");
+    // console.debug("Nav");
 
     return (
         <nav className="Nav">
