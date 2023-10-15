@@ -9,11 +9,11 @@ import './TagList.css';
  * State:
  * - none
  * 
- * { Biog, BlogPost, BlogPostsBytag } -> TagList
+ * { Blog, BlogPost, BlogPostsBytag } -> TagList
  */
 
 function TagList({ tags }) {
-    console.debug("Taglist", "tags", tags);
+    // console.debug("Taglist", "tags", tags);
 
     return (
         <div className="TagList">
