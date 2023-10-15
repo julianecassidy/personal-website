@@ -99,6 +99,25 @@ class BlogApi {
         return posts;
     }
 
+    /** Make an API get request to Strapi to get all tags. Returns an array of
+     * tag daga:
+     * [{id: 1,
+     * name: "test"}, ]
+     */
+    static async getTags() {
+        // console.debug("getTags");
+        const resp = await axios.get(`${STRAPI_BASE_URL}categories`);
+        const tags = resp.data.data.map(tag => {
+            const data = {
+                id: tag.id,
+                name: tag.attributes.Tag,
+            };
+            return data;
+        })
+
+        return tags;
+    }
+
     /** Make an API get request to Strapi to get all blog posts with the given
      * tag by tag ID. Returns an array of post data:
      * [{id: 1,

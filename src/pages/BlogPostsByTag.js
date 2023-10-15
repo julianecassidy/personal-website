@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { BlogApi } from '../siteAPIs';
 import BlogPostCard from '../components/BlogPostCard';
+import TagList from '../components/TagList';
 import NotFoundPage from './NotFoundPage';
 import './BlogPostsByTag.css';
 
@@ -21,6 +22,7 @@ function BlogPostsByTag() {
 
     const { id, tag } = useParams();
     const [posts, setPosts] = useState(null);
+    const [tags, setTags] = useState([]);
     const [isLoading, setIsLoading] = useState(true);
 
     /** Fetches blog posts with tag on page load. */
@@ -42,9 +44,23 @@ function BlogPostsByTag() {
             }
             setIsLoading(false);
         }
+
+        /** Get tags from Strapi API and set state with the response.
+        */
+        async function getTagsFromApi() {
+            // console.debug("getTagsFromApi");
+            try {
+                const tags = await BlogApi.getTags();
+                setTags(tags);
+            }
+            catch (err) {
+                console.log(err);
+            }
+        }
         getTaggedPostsFromApi();
+        getTagsFromApi();
     }, [id, tag]);
-    
+
 
     if (isLoading) return (
         <div className="BlogPostsByTag-loading">
@@ -59,23 +75,29 @@ function BlogPostsByTag() {
         <div className="BlogPostsByTag">
             <h1>Blog</h1>
             <h2>Posts tagged: {tag}</h2>
+            <div className="BlogPostsByTag-page-content">
             {posts.length === 0
                 ? <div className="BlogPostsByTag-no-posts">
                     <p>No posts to display.</p>
-                  </div>
+                </div>
                 : <div className="BlogPostsByTag-posts">
                     {posts.map(post =>
-                    <BlogPostCard 
-                      key={post.id} 
-                      id={post.id}
-                      permalink={post.permalink}
-                      title={post.title}
-                      content={post.content} 
-                      date={post.date}
-                    />
-                )}
+                        <BlogPostCard
+                            key={post.id}
+                            id={post.id}
+                            permalink={post.permalink}
+                            title={post.title}
+                            content={post.content}
+                            date={post.date}
+                        />
+                    )}
                 </div>
             }
+            <div className="Blog-tags">
+                <h3>Explore More</h3>
+                <TagList tags={tags} />
+            </div>
+            </div>
         </div>
     )
 
