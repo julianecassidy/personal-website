@@ -8,8 +8,8 @@ import RoutesList from "../RoutesList";
 import Footer from "../components/Footer";
 import './App.css';
 
-const PROJECTS_TO_DISPLAY = ['react-jobify', 'flitter'];
-const SCREENSHOTS = ['/jobify.png', '/flitter.png'];
+const PROJECTS_TO_DISPLAY = ['fetch-folio', 'react-jobify', 'flitter'];
+const SCREENSHOTS = ['/fetchfolio-database-schema.png', '/jobify.png', '/flitter.png'];
 
 
 /**App for Website
