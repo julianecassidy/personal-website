@@ -52,6 +52,10 @@
     font-size: 16px;
 }
 
+.Blog-no-posts {
+    width: 100%;
+}
+
 .Blog-no-posts p {
     text-align: center;
     font-family: 'Open-sans', sans-serif;
