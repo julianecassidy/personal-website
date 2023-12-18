@@ -34,6 +34,7 @@
 
 .Blog-page-content {
     display: flex;
+    flex-wrap: wrap;
 }
 
 .Blog-loading h1 {
@@ -52,8 +53,10 @@
     font-size: 16px;
 }
 
-.Blog-no-posts {
-    width: 100%;
+@media screen and (max-width: 600px) {
+    .Blog-no-posts {
+        width: 100%;
+    }
 }
 
 .Blog-no-posts p {
@@ -72,18 +75,33 @@
     }
 }
 
-.Blog-posts {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    width: 80%;
+@media screen and (min-width: 600px) {
+    .Blog-posts {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+        width: 80%;
+    }
 }
 
-.Blog-tags {
-    width: 100px;
-    min-height: 200px;
-    padding-left: 25px;
-    border-left: 1px solid;
-    border-color: #4F6367;
+@media screen and (max-width: 600px) {
+    .Blog-tags {
+        width: 100%;
+        min-height: 200px;
+        padding-top: 15px;
+        border-top: 1px solid;
+        border-color: #4F6367;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .Blog-tags {
+        width: 100px;
+        min-height: 200px;
+        padding-left: 25px;
+        border-left: 1px solid;
+        border-color: #4F6367;
+    }
 }
