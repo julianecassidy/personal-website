@@ -141,7 +141,7 @@
         padding-left: 15px;
         padding-bottom: 10px;
         width: 325px;
-        height: 275px;
+        min-height: 275px;
         background: #eaeaea;
         border-radius: 10px;
         box-shadow: -1px -1px 10px #7A9E9F;
@@ -158,7 +158,7 @@
         padding-left: 25px;
         padding-bottom: 10px;
         width: 200px;
-        height: 200px;
+        min-height: 200px;
         background: #eaeaea;
         border-radius: 10px;
         box-shadow: -1px -1px 10px #7A9E9F;
