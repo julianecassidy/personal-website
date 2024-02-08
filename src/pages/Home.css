@@ -59,7 +59,7 @@
     margin-bottom: 0px;
     font-family: 'La Belle Aurore', cursive;
     font-size: 45px;
-    color: #eaeaea;
+    color: #f7f7f7;
 }
 
 .Home-text h3 {
@@ -74,7 +74,7 @@
     font-family: 'Economica', sans-serif;
     text-transform: uppercase;
     font-size: 18px;
-    color: #eaeaea;
+    color: #f7f7f7;
 }
 
 @media screen and (max-width: 750px) {
@@ -117,7 +117,7 @@
     width: 150px;
     height: 50px;
     background-color: #4F6367;
-    color: #eaeaea;
+    color: #f7f7f7;
     font-family: 'Open-sans', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
@@ -142,7 +142,7 @@
         padding-bottom: 10px;
         width: 325px;
         min-height: 275px;
-        background: #eaeaea;
+        background: #f7f7f7;
         border-radius: 10px;
         box-shadow: -1px -1px 10px #7A9E9F;
         z-index: 10;
@@ -159,7 +159,7 @@
         padding-bottom: 10px;
         width: 200px;
         min-height: 200px;
-        background: #eaeaea;
+        background: #f7f7f7;
         border-radius: 10px;
         box-shadow: -1px -1px 10px #7A9E9F;
         z-index: 10;
@@ -189,7 +189,7 @@
     width: 150px;
     height: 50px;
     background-color: #4F6367;
-    color: #eaeaea;
+    color: #f7f7f7;
     font-family: 'Open-sans', sans-serif;
     font-size: 14px;
     text-transform: uppercase;
