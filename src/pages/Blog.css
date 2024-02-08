@@ -32,9 +32,18 @@
     color: #4F6367;
 }
 
-.Blog-page-content {
-    display: flex;
-    flex-wrap: wrap;
+@media screen and (max-width: 600px) {
+    .Blog-page-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .Blog-page-content {
+        display: flex;
+        flex-wrap: nowrap;
+    }
 }
 
 .Blog-loading h1 {
@@ -56,6 +65,12 @@
 @media screen and (max-width: 600px) {
     .Blog-no-posts {
         width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .Blog-no-posts {
+        width: 80%;
     }
 }
 
@@ -98,7 +113,6 @@
 
 @media screen and (min-width: 600px) {
     .Blog-tags {
-        width: 100px;
         min-height: 200px;
         padding-left: 25px;
         border-left: 1px solid;
