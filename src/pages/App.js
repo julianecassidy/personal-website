@@ -55,7 +55,7 @@ function App() {
     <HelmetProvider context={helmetContext}>
       <BrowserRouter>
       <div className="App-nav-hamburger">
-        <MobileNav pageWrapId={'page-wrap'} outerContainerId={'outer-container'} />
+        <MobileNav />
       </div>
         <Nav />
         <RoutesList projects={projects} />
