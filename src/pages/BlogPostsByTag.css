@@ -32,8 +32,18 @@
     color: #4F6367;
 }
 
-.BlogPostsByTag-page-content {
-    display: flex;
+@media screen and (max-width: 600px) {
+    .BlogPostsByTag-page-content {
+        display: flex;
+        flex-wrap: wrap;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .BlogPostsByTag-page-content {
+        display: flex;
+        flex-wrap: nowrap;
+    }
 }
 
 .BlogPostsByTag-loading h1 {
@@ -53,13 +63,13 @@
 }
 
 @media screen and (max-width: 600px) {
-    .Blog-no-posts {
+    .BlogPostsByTag-no-posts {
         width: 100%;
     }
 }
 
 @media screen and (min-width: 600px) {
-    .Blog-no-posts {
+    .BlogPostsByTag-no-posts {
         width: 80%;
     }
 }
