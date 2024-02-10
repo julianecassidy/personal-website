@@ -52,6 +52,18 @@
     font-size: 16px;
 }
 
+@media screen and (max-width: 600px) {
+    .Blog-no-posts {
+        width: 100%;
+    }
+}
+
+@media screen and (min-width: 600px) {
+    .Blog-no-posts {
+        width: 80%;
+    }
+}
+
 .BlogPostsByTag-no-posts p {
     text-align: center;
     font-family: 'Open-sans', sans-serif;
